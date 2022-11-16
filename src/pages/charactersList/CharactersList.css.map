@@ -1,1 +1,1 @@
-{"version":3,"sources":["Characters.scss","Characters.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,gBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;ACCF","file":"Characters.css"}
+{"version":3,"sources":["CharactersList.scss","CharactersList.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,aAAA;EACA,eAAA;EACA,uBAAA;EACA,mBAAA;EACA,SAAA;EACA,YAAA;ACCF","file":"CharactersList.css"}

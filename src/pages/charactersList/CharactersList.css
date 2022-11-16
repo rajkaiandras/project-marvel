@@ -1,8 +1,9 @@
-.Characters {
-  font-size: 1.25rem;
-  font-weight: 300;
+.CharactersList {
+  padding: 30px 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   flex-grow: 1;
-}/*# sourceMappingURL=Characters.css.map */
+}/*# sourceMappingURL=CharactersList.css.map */

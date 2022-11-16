@@ -34,7 +34,7 @@ export const CharactersList = () => {
   }
 
   return (
-    <div className="Characters">
+    <div className="CharactersList">
       {data &&
         data.data.results
           .filter(
