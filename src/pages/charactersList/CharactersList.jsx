@@ -4,9 +4,9 @@ import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 
 // styles
-import './Characters.css';
+import './CharactersList.css';
 
-export const Characters = () => {
+export const CharactersList = () => {
   const apiEndpoint = 'http://gateway.marvel.com/v1/public/characters';
   const limit = '100';
   const timeStamp = '1'; /* Date.now(); */

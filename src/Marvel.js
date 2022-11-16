@@ -7,7 +7,7 @@ import { Header } from './components/header/Header';
 
 // pages
 import { Home } from './pages/home/Home';
-import { Characters } from './pages/characters/Characters';
+import { CharactersList } from './pages/charactersList/CharactersList';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
 
@@ -20,7 +20,7 @@ export const Marvel = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/characters" element={<Characters />} />
+        <Route path="/characters" element={<CharactersList />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
