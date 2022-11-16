@@ -1,3 +1,11 @@
+# Practice React JS - Project Marvel
+
+## Used React JS Features:
+
+- Create React App
+- UseState
+- SCSS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
