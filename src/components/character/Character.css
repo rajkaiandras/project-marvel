@@ -1,0 +1,36 @@
+.Character {
+  width: 150px;
+  height: 250px;
+  border-bottom: 2px solid gray;
+  background-color: transparent;
+  position: relative;
+}
+.Character .character-image-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+.Character .character-image-container .character-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 200ms ease-in-out;
+}
+.Character hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+.Character .character-name {
+  font-weight: 300;
+  text-align: center;
+  color: gray;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}/*# sourceMappingURL=Character.css.map */
