@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 // components
 import { Footer } from './components/footer/Footer';
@@ -17,10 +18,12 @@ export const Marvel = () => {
   return (
     <div className="Marvel">
       <Header />
-      <Home />
-      <Characters />
-      <SignUp />
-      <LogIn />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
       <Footer />
     </div>
   );

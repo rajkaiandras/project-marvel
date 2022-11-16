@@ -1,10 +1,15 @@
 .Header {
-  height: 100px;
+  min-height: 100px;
   padding: 10px;
   border-bottom: 1px solid gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .Header {
+    flex-direction: column;
+  }
 }
 .Header .logo {
   font-size: 3rem;
@@ -12,12 +17,23 @@
   text-transform: uppercase;
   color: red;
 }
-.Header .nav-bar .link {
+.Header .nav-bar {
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 375px) {
+  .Header .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.Header .nav-bar a {
   font-size: 1.25rem;
   font-weight: 300;
-  padding-right: 20px;
   text-decoration: none;
 }
-.Header .nav-bar .link:hover {
+.Header .nav-bar a:hover {
   color: red;
 }/*# sourceMappingURL=Header.css.map */
