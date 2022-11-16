@@ -6,6 +6,7 @@ import { Header } from './components/header/Header';
 
 // pages
 import { Home } from './pages/home/Home';
+import { Characters } from './pages/characters/Characters';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
 
@@ -17,6 +18,7 @@ export const Marvel = () => {
     <div className="Marvel">
       <Header />
       <Home />
+      <Characters />
       <SignUp />
       <LogIn />
       <Footer />
