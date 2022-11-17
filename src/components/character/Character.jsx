@@ -1,5 +1,7 @@
-import './Character.css';
 import { useRef } from 'react';
+
+// styles
+import './Character.css';
 
 export default function Character({ name, imageUrl }) {
   const characterImage = useRef();

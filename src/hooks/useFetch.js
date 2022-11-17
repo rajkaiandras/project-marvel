@@ -13,6 +13,7 @@ export const useFetch = (url) => {
 
       try {
         const res = await fetch(url, {
+          method: 'GET',
           signal: controller.signal,
         });
         if (!res.ok) {
