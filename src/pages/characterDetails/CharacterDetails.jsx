@@ -52,15 +52,16 @@ export const CharacterDetails = () => {
           <div className="details-container">
             <h2 className="character-title">Character Details</h2>
             <h3 className="character-subtitle">{data.data.results[0].name}</h3>
-            {isFavorite ? (
-              <i
-                onClick={() => setIsFavorite(!isFavorite)}
-                className="fa-regular fa-heart"
-              ></i>
-            ) : (
+            {isFavorite && (
               <i
                 onClick={() => setIsFavorite(!isFavorite)}
                 className="fa-solid fa-heart"
+              ></i>
+            )}
+            {!isFavorite && (
+              <i
+                onClick={() => setIsFavorite(!isFavorite)}
+                className="fa-regular fa-heart"
               ></i>
             )}
           </div>
