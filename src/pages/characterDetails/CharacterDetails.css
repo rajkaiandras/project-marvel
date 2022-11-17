@@ -1,8 +1,40 @@
+/* font awesome icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 .CharacterDetails {
-  font-size: 1.25rem;
-  font-weight: 300;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+.CharacterDetails .character-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.CharacterDetails .character-container .character-image {
+  width: 50%;
+}
+.CharacterDetails .character-container .details-container {
+  width: 50%;
+  height: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.CharacterDetails .character-container .details-container .character-title {
+  font-size: 1rem;
+}
+.CharacterDetails .character-container .details-container .character-subtitle {
+  font-size: 2rem;
+  color: red;
+}
+.CharacterDetails .character-container .details-container .fa-heart {
+  font-size: 2rem;
+  color: red;
+}
+.CharacterDetails .error {
+  color: red;
 }/*# sourceMappingURL=CharacterDetails.css.map */

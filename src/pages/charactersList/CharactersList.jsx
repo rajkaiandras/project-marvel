@@ -15,11 +15,11 @@ import CharacterCard from '../../components/characterCard/CharacterCard';
 import './CharactersList.css';
 
 export const CharactersList = () => {
-  const { apiEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
+  const { apiCharactersEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
 
   const { data, isPending, error } = useFetch(
-    `${apiEndpoint}?limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
+    `${apiCharactersEndpoint}?limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
   return (
