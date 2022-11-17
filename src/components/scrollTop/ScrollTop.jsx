@@ -23,7 +23,7 @@ export default function ScrollTop() {
   };
 
   return (
-    <button className="scroll-top-btn">
+    <button className="ScrollTop">
       {visibility && (
         <i
           className="scroll-top-logo fa-solid fa-circle-chevron-up"

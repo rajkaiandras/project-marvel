@@ -1,17 +1,18 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
-.scroll-top-btn {
+.ScrollTop {
   background-color: transparent;
   border: none;
   outline: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
+  z-index: 999;
   cursor: pointer;
 }
-.scroll-top-btn .scroll-top-logo {
+.ScrollTop .scroll-top-logo {
   font-size: 2rem;
   color: red;
 }
-.scroll-top-btn .scroll-top-logo:hover {
+.ScrollTop .scroll-top-logo:hover {
   color: black;
 }/*# sourceMappingURL=ScrollTop.css.map */
