@@ -19,7 +19,7 @@
 }
 .Header .nav-bar {
   width: 100%;
-  max-width: 375px;
+  max-width: 350px;
   display: flex;
   justify-content: space-between;
 }
@@ -33,6 +33,7 @@
   font-size: 1.25rem;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 5px;
 }
 .Header .nav-bar a:hover {
   color: red;
