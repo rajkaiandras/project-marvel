@@ -6,4 +6,7 @@
   align-items: center;
   gap: 10px;
   flex-grow: 1;
+}
+.CharactersList .error {
+  color: red;
 }/*# sourceMappingURL=CharactersList.css.map */

@@ -26,10 +26,10 @@ export const useFetch = (url) => {
         setError(null);
       } catch (err) {
         if (err.name === 'AbortError') {
-          console.log('the fetch was aborted');
+          console.log('fetch was aborted');
         } else {
           setIsPending(false);
-          setError('Could not fetch the data');
+          setError('could not fetch the data');
         }
       }
     };

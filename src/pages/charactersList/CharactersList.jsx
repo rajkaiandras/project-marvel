@@ -8,6 +8,7 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 import { useFetch } from '../../hooks/useFetch';
 
 // components
+import LoadingMask from '../../components/loadingMask/LoadingMask';
 import CharacterCard from '../../components/characterCard/CharacterCard';
 
 // styles
@@ -21,12 +22,10 @@ export const CharactersList = () => {
     `${apiEndpoint}?limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
-  data ? console.log(data) : console.log('No data to fetch');
-
   return (
     <div className="CharactersList">
       {/* loading mask */}
-      {isPending && <div>Loading...</div>}
+      {isPending && <LoadingMask />}
 
       {/* character display */}
       {data &&
@@ -46,7 +45,7 @@ export const CharactersList = () => {
           ))}
 
       {/* error display */}
-      {error && <div>{error}</div>}
+      {error && <div className="error">{error}</div>}
     </div>
   );
 };

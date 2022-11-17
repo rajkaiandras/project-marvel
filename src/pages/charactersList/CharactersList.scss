@@ -6,4 +6,8 @@
   align-items: center;
   gap: 10px;
   flex-grow: 1;
+
+  .error {
+    color: red;
+  }
 }
