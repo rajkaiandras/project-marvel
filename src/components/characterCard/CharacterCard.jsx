@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 
 // styles
-import './Character.css';
+import './CharacterCard.css';
 
-export default function Character({ name, imageUrl }) {
+export default function CharacterCard({ name, imageUrl }) {
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
@@ -22,7 +22,7 @@ export default function Character({ name, imageUrl }) {
 
   return (
     <div
-      className="Character"
+      className="CharacterCard"
       onMouseOver={onMouseOverHandler}
       onMouseLeave={onMouseLeaveHandler}
     >

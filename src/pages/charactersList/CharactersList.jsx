@@ -8,7 +8,7 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 import { useFetch } from '../../hooks/useFetch';
 
 // components
-import Character from '../../components/character/Character';
+import CharacterCard from '../../components/characterCard/CharacterCard';
 
 // styles
 import './CharactersList.css';
@@ -38,7 +38,7 @@ export const CharactersList = () => {
           )
           .map((character) => (
             <Link key={character.id} to={`/characters/${character.id}`}>
-              <Character
+              <CharacterCard
                 name={character.name}
                 imageUrl={character.thumbnail.path}
               />
