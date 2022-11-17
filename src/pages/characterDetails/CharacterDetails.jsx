@@ -26,10 +26,6 @@ export const CharacterDetails = () => {
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
-  if (data) {
-    console.log(data);
-  }
-
   return (
     <div className="CharacterDetails">
       {/* error display */}
@@ -39,19 +35,25 @@ export const CharacterDetails = () => {
       {isPending && <LoadingMask />}
 
       {data && (
-        <div className="character-container">
-          <img
-            className="character-image"
-            src={
-              data.data.results[0].thumbnail.path +
-              '.' +
-              data.data.results[0].thumbnail.extension
-            }
-            alt={data.data.results[0].name}
-          />
-          <div className="details-container">
-            <h2 className="character-title">Character Details</h2>
-            <h3 className="character-subtitle">{data.data.results[0].name}</h3>
+        <div className="details-container">
+          <div className="image-wrapper">
+            <img
+              className="character-image"
+              src={
+                data.data.results[0].thumbnail.path +
+                '.' +
+                data.data.results[0].thumbnail.extension
+              }
+              alt={data.data.results[0].name}
+            />
+          </div>
+          <div className="content">
+            <div className="title-container">
+              <hr />
+              <h2 className="title">Character Details</h2>
+              <hr />
+            </div>
+            <h3 className="character-name">{data.data.results[0].name}</h3>
             {isFavorite && (
               <i
                 onClick={() => setIsFavorite(!isFavorite)}

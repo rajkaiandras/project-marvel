@@ -5,16 +5,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #202020;
 
   @media (max-width: 600px) {
+    justify-content: space-evenly;
     flex-direction: column;
   }
 
   .logo {
+    padding: 0 5px;
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
-    color: red;
+    letter-spacing: -2px;
+    transform: scaleY(150%);
+    color: white;
+    background-color: red;
+
+    @media (max-width: 600px) {
+      transform: scaleY(100%);
+    }
   }
 
   .nav-bar {
@@ -30,9 +40,10 @@
 
     a {
       font-size: 1.25rem;
-      font-weight: 300;
+      font-weight: 900;
       text-decoration: none;
       margin-bottom: 5px;
+      color: white;
 
       &:hover {
         color: red;

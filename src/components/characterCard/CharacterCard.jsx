@@ -10,13 +10,15 @@ export default function CharacterCard({ name, imageUrl }) {
 
   const onMouseOverHandler = () => {
     characterImage.current.style.transform = 'scale(1.1)';
-    horizontalRule.current.style.height = '98px';
+    horizontalRule.current.style.height = '100px';
+    horizontalRule.current.style.borderRadius = '0 0 20px 0';
     characterName.current.style.color = 'white';
   };
 
   const onMouseLeaveHandler = () => {
     characterImage.current.style.transform = 'scale(1)';
     horizontalRule.current.style.height = '4px';
+    horizontalRule.current.style.borderRadius = '0';
     characterName.current.style.color = 'gray';
   };
 

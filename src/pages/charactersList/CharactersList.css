@@ -1,12 +1,43 @@
 .CharactersList {
-  padding: 30px 10px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+.CharactersList .title-container {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  background-image: url("../../assets/images/characters-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  flex-grow: 1;
+}
+.CharactersList .title-container .title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.CharactersList .title-container .subtitle {
+  font-weight: 500;
+  text-align: center;
+  color: gray;
 }
 .CharactersList .error {
   color: red;
+}
+.CharactersList .character-cards-container {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
 }/*# sourceMappingURL=CharactersList.css.map */

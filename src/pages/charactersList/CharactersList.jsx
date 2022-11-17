@@ -25,30 +25,39 @@ export const CharactersList = () => {
 
   return (
     <div className="CharactersList">
-      {/* error display */}
-      {error && <div className="error">{error}</div>}
+      <div className="title-container">
+        <h2 className="title">Marvel Characters</h2>
+        <p className="subtitle">
+          Get hooked on a hearty helping of heroes and villains from the humble
+          House of Ideas!
+        </p>
+      </div>
+      <div className="character-cards-container">
+        {/* error display */}
+        {error && <div className="error">{error}</div>}
 
-      {/* loading mask */}
-      {isPending && <LoadingMask />}
+        {/* loading mask */}
+        {isPending && <LoadingMask />}
 
-      {/* character display */}
-      {data &&
-        data.data.results
-          .filter(
-            (character) =>
-              character.thumbnail.extension === 'jpg' &&
-              !character.thumbnail.path.includes('image_not_available')
-          )
-          .map((character) => (
-            <Link key={character.id} to={`/characters/${character.id}`}>
-              <CharacterCard
-                name={character.name}
-                imageUrl={character.thumbnail.path}
-              />
-            </Link>
-          ))}
+        {/* character display */}
+        {data &&
+          data.data.results
+            .filter(
+              (character) =>
+                character.thumbnail.extension === 'jpg' &&
+                !character.thumbnail.path.includes('image_not_available')
+            )
+            .map((character) => (
+              <Link key={character.id} to={`/characters/${character.id}`}>
+                <CharacterCard
+                  name={character.name}
+                  imageUrl={character.thumbnail.path}
+                />
+              </Link>
+            ))}
+      </div>
 
-      {/* scroll to top icon */}
+      {/* scroll to top */}
       <ScrollTop />
     </div>
   );

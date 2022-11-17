@@ -2,38 +2,66 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 .CharacterDetails {
   width: 100%;
-  padding: 20px;
+  height: calc(100vh - 200px);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
-.CharacterDetails .character-container {
-  width: 100%;
+.CharacterDetails .details-container {
+  width: 640px;
+  height: 480px;
+  border-radius: 0 30px 30px 0;
   display: flex;
   align-items: center;
 }
-.CharacterDetails .character-container .character-image {
-  width: 50%;
+.CharacterDetails .details-container .image-wrapper {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
 }
-.CharacterDetails .character-container .details-container {
-  width: 50%;
-  height: 300px;
-  padding: 2rem;
+.CharacterDetails .details-container .image-wrapper .character-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CharacterDetails .details-container .content {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 0 30px 30px 0;
+  background-color: #202020;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.CharacterDetails .character-container .details-container .character-title {
-  font-size: 1rem;
+.CharacterDetails .details-container .content .title-container hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background-color: lightgray;
 }
-.CharacterDetails .character-container .details-container .character-subtitle {
-  font-size: 2rem;
+.CharacterDetails .details-container .content .title-container .title {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: lightgray;
+}
+.CharacterDetails .details-container .content .character-name {
+  font-size: 1.75rem;
+  font-weight: 300;
   color: red;
 }
-.CharacterDetails .character-container .details-container .fa-heart {
+.CharacterDetails .details-container .content .fa-regular {
   font-size: 2rem;
+  text-align: right;
+  color: lightgray;
+}
+.CharacterDetails .details-container .content .fa-solid {
+  font-size: 2rem;
+  text-align: right;
   color: red;
 }
 .CharacterDetails .error {

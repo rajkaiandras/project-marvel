@@ -7,7 +7,9 @@ import './Header.css';
 export const Header = () => {
   return (
     <header className="Header">
-      <div className="logo">Marvel</div>
+      <Link to="/">
+        <div className="logo">Marvel</div>
+      </Link>
       <nav className="nav-bar">
         <Link to="/">Home</Link>
         <Link to="/characters">Characters</Link>

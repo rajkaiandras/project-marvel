@@ -3,6 +3,8 @@
   border-top: 1px solid gray;
   font-size: 1.25rem;
   font-weight: 300;
+  color: white;
+  background-color: #202020;
   display: flex;
   justify-content: center;
   align-items: center;
