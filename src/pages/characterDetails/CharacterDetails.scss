@@ -3,7 +3,7 @@
 
 .CharacterDetails {
   width: 100%;
-  height: calc(100vh - 200px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,6 @@
   .details-container {
     width: 640px;
     height: 480px;
-    border-radius: 0 30px 30px 0;
     display: flex;
     align-items: center;
 
@@ -38,12 +37,21 @@
       flex-direction: column;
       justify-content: space-evenly;
 
+      @media (max-width: 640px) {
+        padding: 5px;
+        border-radius: 0;
+      }
+
       .title-container {
         hr {
           width: 100%;
           height: 4px;
           border: none;
           background-color: lightgray;
+
+          @media (max-width: 640px) {
+            height: 2px;
+          }
         }
 
         .title {
@@ -52,6 +60,11 @@
           font-weight: 900;
           text-align: center;
           color: lightgray;
+
+          @media (max-width: 640px) {
+            font-size: 1rem;
+            font-weight: 500;
+          }
         }
       }
 
@@ -59,18 +72,30 @@
         font-size: 1.75rem;
         font-weight: 300;
         color: red;
+
+        @media (max-width: 640px) {
+          font-size: 1.25rem;
+        }
       }
 
       .fa-regular {
         font-size: 2rem;
         text-align: right;
         color: lightgray;
+
+        @media (max-width: 640px) {
+          font-size: 1.25rem;
+        }
       }
 
       .fa-solid {
         font-size: 2rem;
         text-align: right;
         color: red;
+
+        @media (max-width: 640px) {
+          font-size: 1.25rem;
+        }
       }
     }
   }
