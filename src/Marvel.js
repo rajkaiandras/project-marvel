@@ -8,6 +8,7 @@ import { Header } from './components/header/Header';
 // pages
 import { Home } from './pages/home/Home';
 import { CharactersList } from './pages/charactersList/CharactersList';
+import { CharacterDetails } from './pages/characterDetails/CharacterDetails';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
 
@@ -21,6 +22,7 @@ export const Marvel = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<CharactersList />} />
+        <Route path="/characters/:id" element={<CharacterDetails />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

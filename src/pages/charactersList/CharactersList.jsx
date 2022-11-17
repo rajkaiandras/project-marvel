@@ -24,6 +24,9 @@ export const CharactersList = () => {
 
   return (
     <div className="CharactersList">
+      {/* error display */}
+      {error && <div className="error">{error}</div>}
+
       {/* loading mask */}
       {isPending && <LoadingMask />}
 
@@ -43,9 +46,6 @@ export const CharactersList = () => {
               />
             </Link>
           ))}
-
-      {/* error display */}
-      {error && <div className="error">{error}</div>}
     </div>
   );
 };
