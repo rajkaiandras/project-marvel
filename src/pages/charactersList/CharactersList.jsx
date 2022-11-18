@@ -16,9 +16,9 @@ import ScrollTop from '../../components/scrollTop/ScrollTop';
 import './CharactersList.css';
 
 export const CharactersList = () => {
+  // fetching characters list
   const { apiCharactersEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
-
   const { data, isPending, error } = useFetch(
     `${apiCharactersEndpoint}?limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
