@@ -19,15 +19,16 @@ export const Feedback = () => {
 
   const saveFeedbackEmail = (event) => {
     setFeedbackEmail(event.target.value);
+    if (event.target.value.includes('@') && event.target.value.includes('.')) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
   };
 
   const saveFeedbackMessage = (event) => {
     setFeedbackMessage(event.target.value);
-    if (
-      event.target.value.length >= 8 &&
-      feedbackEmail.includes('@') &&
-      feedbackEmail.includes('.')
-    ) {
+    if (event.target.value.length >= 8) {
       setIsDisabled(false);
     } else {
       setIsDisabled(true);
@@ -60,9 +61,9 @@ export const Feedback = () => {
   };
 
   return (
-    <>
+    <div className="Feedback">
       <button className="feedback-btn" onClick={togglePopUp}>
-        <i className="feedback-logo fa-solid fa-comment-dots"></i>
+        <i className="feedback-logo fa-solid fa-envelope"></i>
       </button>
 
       {showFeedbackModal && (
@@ -99,6 +100,6 @@ export const Feedback = () => {
       )}
 
       {showThankYou && <p className="thank-you-message">Thank You</p>}
-    </>
+    </div>
   );
 };

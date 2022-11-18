@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // components
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { Feedback } from './components/feedback/Feedback';
+import { Subscription } from './components/subscription/Subscription';
 
 // pages
 import { Home } from './pages/home/Home';
@@ -17,6 +18,18 @@ import { LogIn } from './pages/logIn/LogIn';
 import './Marvel.css';
 
 export const Marvel = () => {
+  const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSubscriptionVisibility(true);
+    }, 3000);
+  }, []);
+
+  const closeSubscription = () => {
+    setSubscriptionVisibility(false);
+  };
+
   return (
     <div className="Marvel">
       <Header />
@@ -29,6 +42,9 @@ export const Marvel = () => {
       </Routes>
       <Footer />
       <Feedback />
+      {subscriptionVisibility && (
+        <Subscription closeSubscription={closeSubscription} />
+      )}
     </div>
   );
 };
