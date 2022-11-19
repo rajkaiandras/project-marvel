@@ -1,8 +1,56 @@
 .SignUp {
-  font-size: 1.25rem;
-  font-weight: 300;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+
+  .sign-up-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .sign-up-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: red;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      color: gray;
+    }
+
+    input {
+      height: 2rem;
+      padding-left: 0.5rem;
+      border: 1px solid gray;
+      border-radius: 0;
+      outline: none;
+      color: gray;
+    }
+
+    .sign-up-btn {
+      height: 1.5rem;
+      border: none;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      background-color: tomato;
+
+      &:hover {
+        background-color: red;
+      }
+
+      &:active {
+        transform: scale(0.975);
+      }
+    }
+  }
 }
