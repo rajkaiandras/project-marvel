@@ -20,7 +20,7 @@ export const Header = () => {
         <Link to="/characters">Characters</Link>
         <Link to="/login">Log In</Link>
         <Link to="/signup">Sign Up</Link>
-        <Link to="#" onClick={logOut}>
+        <Link className="log-out-btn" to="#" onClick={logOut}>
           Log Out
         </Link>
       </nav>

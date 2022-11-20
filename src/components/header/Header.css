@@ -30,9 +30,10 @@
 }
 .Header .nav-bar {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 375px) {
   .Header .nav-bar {
@@ -49,4 +50,13 @@
 }
 .Header .nav-bar a:hover {
   color: red;
+}
+.Header .nav-bar .log-out-btn {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+.Header .nav-bar .log-out-btn:hover {
+  color: white;
+  background-color: red;
 }/*# sourceMappingURL=Header.css.map */
