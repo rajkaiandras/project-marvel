@@ -20,7 +20,9 @@ export const Header = () => {
         <Link to="/characters">Characters</Link>
         <Link to="/login">Log In</Link>
         <Link to="/signup">Sign Up</Link>
-        <button onClick={logOut}>Log Out</button>
+        <Link to="#" onClick={logOut}>
+          Log Out
+        </Link>
       </nav>
     </header>
   );

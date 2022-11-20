@@ -30,7 +30,7 @@
 }
 .Header .nav-bar {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   display: flex;
   justify-content: space-between;
 }
@@ -41,10 +41,10 @@
   }
 }
 .Header .nav-bar a {
+  margin-bottom: 5px;
   font-size: 1.25rem;
   font-weight: 900;
   text-decoration: none;
-  margin-bottom: 5px;
   color: white;
 }
 .Header .nav-bar a:hover {
