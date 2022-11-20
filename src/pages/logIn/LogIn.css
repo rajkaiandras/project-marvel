@@ -1,5 +1,4 @@
 .LogIn {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +12,7 @@
 }
 .LogIn .log-in-form .log-in-title {
   font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   color: red;
 }
