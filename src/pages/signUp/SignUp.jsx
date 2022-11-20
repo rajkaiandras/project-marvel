@@ -54,7 +54,7 @@ export const SignUp = () => {
             Loading
           </button>
         )}
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
       </form>
     </section>
   );

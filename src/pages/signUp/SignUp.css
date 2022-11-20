@@ -45,4 +45,8 @@
 }
 .SignUp .sign-up-form .sign-up-btn:active {
   transform: scale(0.99);
+}
+.SignUp .error {
+  margin-top: 20px;
+  color: gray;
 }/*# sourceMappingURL=SignUp.css.map */
