@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { projectAuth } from '../configs/firebaseConfig';
 
-export const useSignup = () => {
+export const useSignUp = () => {
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
 
