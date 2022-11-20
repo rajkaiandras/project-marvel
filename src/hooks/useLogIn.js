@@ -6,22 +6,25 @@ import { projectAuth } from '../configs/firebaseConfig';
 // hooks
 import { useAuthContext } from './useAuthContext';
 
-export const useLogOut = () => {
+export const useLogIn = () => {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  const logOut = async () => {
+  const logIn = async (email, password) => {
     setError(null);
     setIsPending(true);
 
     try {
-      // sign the user out
-      await projectAuth.signOut();
+      // sign the user in
+      const response = await projectAuth.signInWithEmailAndPassword(
+        email,
+        password
+      );
 
-      // dispatch log out action
-      dispatch({ type: 'LOG_OUT' });
+      // dispatch log in action
+      dispatch({ type: 'LOG_IN', payload: response.user });
 
       // update state
       if (!isCancelled) {
@@ -41,5 +44,5 @@ export const useLogOut = () => {
     return () => setIsCancelled(true);
   }, []);
 
-  return { logOut, error, isPending };
+  return { logIn, error, isPending };
 };

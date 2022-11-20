@@ -44,7 +44,7 @@
 .Header .nav-bar a {
   margin-bottom: 5px;
   font-size: 1.25rem;
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   color: white;
 }
@@ -52,7 +52,8 @@
   color: red;
 }
 .Header .nav-bar .log-out-btn {
-  padding: 10px;
+  color: red;
+  padding: 8px;
   border: 1px solid red;
   border-radius: 3px;
 }
