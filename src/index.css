@@ -9,6 +9,15 @@
   text-decoration: none;
 }
 
+/* Custom variables */
+:root {
+  --primary-clr: hsl(0, 100%, 50%);
+  --disabled-clr: hsl(9, 100%, 64%);
+  --bg-clr: hsl(0, 0%, 13%);
+  --heading-clr: hsl(0, 0%, 27%);
+  --font-clr: hsl(0, 0%, 50%);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }

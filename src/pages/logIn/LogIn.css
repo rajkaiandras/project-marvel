@@ -14,14 +14,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: red;
+  color: var(--heading-clr);
 }
 .LogIn .log-in-form label {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
   font-weight: 300;
-  color: gray;
+  color: var(--font-clr);
 }
 .LogIn .log-in-form input {
   height: 2rem;
@@ -29,7 +29,7 @@
   border: 1px solid gray;
   border-radius: 0;
   outline: none;
-  color: gray;
+  color: var(--font-clr);
 }
 .LogIn .log-in-form .log-in-btn {
   height: 1.5rem;
@@ -38,11 +38,11 @@
   font-weight: 700;
   text-transform: uppercase;
   color: white;
-  background-color: tomato;
+  background-color: var(--primary-clr);
 }
 .LogIn .log-in-form .log-in-btn:hover {
-  background-color: red;
+  transform: scale(1.01);
 }
 .LogIn .log-in-form .log-in-btn:active {
-  transform: scale(0.975);
+  transform: scale(0.99);
 }/*# sourceMappingURL=LogIn.css.map */

@@ -14,7 +14,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: red;
+      color: var(--heading-clr);
     }
 
     label {
@@ -22,7 +22,7 @@
       flex-direction: column;
       margin-bottom: 1rem;
       font-weight: 300;
-      color: gray;
+      color: var(--font-clr);
     }
 
     input {
@@ -31,7 +31,7 @@
       border: 1px solid gray;
       border-radius: 0;
       outline: none;
-      color: gray;
+      color: var(--font-clr);
     }
 
     .sign-up-btn {
@@ -41,14 +41,14 @@
       font-weight: 700;
       text-transform: uppercase;
       color: white;
-      background-color: tomato;
+      background-color: var(--primary-clr);
 
       &:hover {
-        background-color: red;
+        transform: scale(1.01);
       }
 
       &:active {
-        transform: scale(0.975);
+        transform: scale(0.99);
       }
     }
   }
