@@ -23,7 +23,7 @@ import './Marvel.css';
 
 export const Marvel = () => {
   const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
-  const { authIsReady } = useAuthContext();
+  const { authIsReady, user } = useAuthContext();
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,9 +44,18 @@ export const Marvel = () => {
             <Route path="/" element={<Home />} />
             <Route path="/characters" element={<CharactersList />} />
             <Route path="/characters/:id" element={<CharacterDetails />} />
-            <Route path="/userprofile" element={<UserProfile />} />
-            <Route path="/login" element={<LogIn />} />
-            <Route path="/signup" element={<SignUp />} />
+            <Route
+              path="/userprofile"
+              element={user ? <UserProfile /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/login"
+              element={!user ? <LogIn /> : <Navigate to="/userprofile" />}
+            />
+            <Route
+              path="/signup"
+              element={!user ? <SignUp /> : <Navigate to="/userprofile" />}
+            />
           </Routes>
           <Footer />
           <Feedback />
