@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 // hooks
-import { useAuthContext } from './hooks/useAuthContext';
+import { useAuthContext, user } from './hooks/useAuthContext';
 
 // components
 import { Header } from './components/header/Header';
@@ -14,6 +14,7 @@ import { Subscription } from './components/subscription/Subscription';
 import { Home } from './pages/home/Home';
 import { CharactersList } from './pages/charactersList/CharactersList';
 import { CharacterDetails } from './pages/characterDetails/CharacterDetails';
+import { UserProfile } from './pages/userProfile/UserProfile';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
 
@@ -43,6 +44,7 @@ export const Marvel = () => {
             <Route path="/" element={<Home />} />
             <Route path="/characters" element={<CharactersList />} />
             <Route path="/characters/:id" element={<CharacterDetails />} />
+            <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
           </Routes>

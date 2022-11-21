@@ -30,7 +30,9 @@ export const Header = () => {
 
         {user && (
           <>
-            <p className="user-display-name">Hello, {user.displayName}</p>
+            <Link className="user-profile-btn" to={'/userprofile'}>
+              {user.displayName}
+            </Link>
             <Link className="log-out-btn" to="#" onClick={logOut}>
               Log Out
             </Link>
