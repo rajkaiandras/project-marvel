@@ -20,6 +20,7 @@ import { LogIn } from './pages/logIn/LogIn';
 
 // styles
 import './Marvel.css';
+import { FavoritesList } from './pages/favoritesList/FavoritesList';
 
 export const Marvel = () => {
   const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
@@ -46,6 +47,10 @@ export const Marvel = () => {
             <Route path="/" element={<Home />} />
             <Route path="/characters" element={<CharactersList />} />
             <Route path="/characters/:id" element={<CharacterDetails />} />
+            <Route
+              path="/favorites"
+              element={user ? <FavoritesList /> : <Navigate to="/login" />}
+            />
             <Route
               path="/userprofile"
               element={user ? <UserProfile /> : <Navigate to="/login" />}

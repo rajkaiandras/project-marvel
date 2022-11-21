@@ -30,6 +30,9 @@ export const Header = () => {
 
         {user && (
           <>
+            <Link className="favorites-btn" to={'/favorites'}>
+              Favorites
+            </Link>
             <Link className="user-profile-btn" to={'/userprofile'}>
               {user.displayName}
             </Link>

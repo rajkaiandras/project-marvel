@@ -7,6 +7,7 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 // hooks
 import { useFetch } from '../../hooks/useFetch';
 import { useAuthContext } from '../../hooks/useAuthContext';
+import { useFirestore } from '../../hooks/useFirestore';
 
 // components
 import LoadingMask from '../../components/loadingMask/LoadingMask';
@@ -17,6 +18,7 @@ import './CharacterDetails.css';
 export const CharacterDetails = () => {
   const [isFavorite, setIsFavorite] = useState(false);
   const { user } = useAuthContext();
+  const { addDocument, response } = useFirestore('favoriteCharacters');
 
   // fetching character details
   const { apiCharactersEndpoint, timeStamp, publicApiKey, md5Hash } =
@@ -31,8 +33,8 @@ export const CharacterDetails = () => {
   // set character to favorite
   const setFavorite = () => {
     setIsFavorite(true);
-    console.log({
-      user: user.uid,
+    addDocument({
+      userId: user.uid,
       characterId: id,
     });
   };
@@ -41,7 +43,7 @@ export const CharacterDetails = () => {
   const setUnFavorite = () => {
     setIsFavorite(false);
     console.log({
-      user: user.uid,
+      userId: user.uid,
       characterId: id,
     });
   };
