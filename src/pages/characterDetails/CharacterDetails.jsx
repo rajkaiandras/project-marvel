@@ -4,8 +4,9 @@ import { useParams } from 'react-router-dom';
 // configs
 import { marvelApiConfig } from '../../configs/marvelApiConfig';
 
-// custom hooks
+// hooks
 import { useFetch } from '../../hooks/useFetch';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 // components
 import LoadingMask from '../../components/loadingMask/LoadingMask';
@@ -15,6 +16,7 @@ import './CharacterDetails.css';
 
 export const CharacterDetails = () => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const { user } = useAuthContext();
 
   // fetching character details
   const { apiCharactersEndpoint, timeStamp, publicApiKey, md5Hash } =
@@ -25,6 +27,24 @@ export const CharacterDetails = () => {
   const { data, isPending, error } = useFetch(
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
+
+  // set character to favorite
+  const setFavorite = () => {
+    setIsFavorite(true);
+    console.log({
+      user: user.uid,
+      characterId: id,
+    });
+  };
+
+  // set character to unfavorite
+  const setUnFavorite = () => {
+    setIsFavorite(false);
+    console.log({
+      user: user.uid,
+      characterId: id,
+    });
+  };
 
   return (
     <div className="CharacterDetails">
@@ -55,16 +75,10 @@ export const CharacterDetails = () => {
             </div>
             <h3 className="character-name">{data.data.results[0].name}</h3>
             {isFavorite && (
-              <i
-                onClick={() => setIsFavorite(!isFavorite)}
-                className="fa-solid fa-heart"
-              ></i>
+              <i onClick={setUnFavorite} className="fa-solid fa-heart"></i>
             )}
             {!isFavorite && (
-              <i
-                onClick={() => setIsFavorite(!isFavorite)}
-                className="fa-regular fa-heart"
-              ></i>
+              <i onClick={setFavorite} className="fa-regular fa-heart"></i>
             )}
           </div>
         </div>
