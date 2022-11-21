@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 // hooks
-import { useAuthContext, user } from './hooks/useAuthContext';
+import { useAuthContext } from './hooks/useAuthContext';
 
 // components
 import { Header } from './components/header/Header';
@@ -27,7 +27,9 @@ export const Marvel = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setSubscriptionVisibility(true);
+      if (!user) {
+        setSubscriptionVisibility(true);
+      }
     }, 3000);
   }, []);
 
@@ -59,7 +61,7 @@ export const Marvel = () => {
           </Routes>
           <Footer />
           <Feedback />
-          {subscriptionVisibility && (
+          {subscriptionVisibility && !user && (
             <Subscription closeSubscription={closeSubscription} />
           )}
         </>
