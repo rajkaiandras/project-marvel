@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+// hooks
+import { useAuthContext } from './hooks/useAuthContext';
+
 // components
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
@@ -19,6 +22,7 @@ import './Marvel.css';
 
 export const Marvel = () => {
   const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
+  const { authIsReady } = useAuthContext();
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,18 +36,22 @@ export const Marvel = () => {
 
   return (
     <div className="Marvel">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/characters" element={<CharactersList />} />
-        <Route path="/characters/:id" element={<CharacterDetails />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-      <Footer />
-      <Feedback />
-      {subscriptionVisibility && (
-        <Subscription closeSubscription={closeSubscription} />
+      {authIsReady && (
+        <>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/characters" element={<CharactersList />} />
+            <Route path="/characters/:id" element={<CharacterDetails />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+          <Footer />
+          <Feedback />
+          {subscriptionVisibility && (
+            <Subscription closeSubscription={closeSubscription} />
+          )}
+        </>
       )}
     </div>
   );
