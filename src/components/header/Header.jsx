@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 // hooks
 import { useLogOut } from '../../hooks/useLogOut';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 // styles
 import './Header.css';
 
 export const Header = () => {
   const { logOut } = useLogOut();
+  const { user } = useAuthContext();
 
   return (
     <header className="Header">
@@ -18,11 +20,22 @@ export const Header = () => {
       <nav className="nav-bar">
         <Link to="/">Home</Link>
         <Link to="/characters">Characters</Link>
-        <Link to="/login">Log In</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link className="log-out-btn" to="#" onClick={logOut}>
-          Log Out
-        </Link>
+
+        {!user && (
+          <>
+            <Link to="/login">Log In</Link>
+            <Link to="/signup">Sign Up</Link>
+          </>
+        )}
+
+        {user && (
+          <>
+            <p className="user-display-name">Hello, {user.displayName}</p>
+            <Link className="log-out-btn" to="#" onClick={logOut}>
+              Log Out
+            </Link>
+          </>
+        )}
       </nav>
     </header>
   );

@@ -51,6 +51,11 @@
 .Header .nav-bar a:hover {
   color: red;
 }
+.Header .nav-bar .user-display-name {
+  margin-bottom: 5px;
+  margin-left: 50px;
+  color: gray;
+}
 .Header .nav-bar .log-out-btn {
   color: red;
   padding: 8px;
