@@ -28,11 +28,7 @@ export const FavoritesList = () => {
       {errorCollection && <p>{errorCollection}</p>}
       {documents &&
         documents.map((document) => {
-          return (
-            <>
-              <p>character card</p>
-            </>
-          );
+          return <p key={document.characterId}>{document.characterId}</p>;
         })}
     </div>
   );
