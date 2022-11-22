@@ -10,7 +10,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 
 // components
-import LoadingMask from '../../components/loadingMask/LoadingMask';
+import { LoadingMask } from '../../components/loadingMask/LoadingMask';
 
 // styles
 import './CharacterDetails.css';

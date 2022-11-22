@@ -3,7 +3,7 @@ import loadingAnimation from '../../assets/gifs/marvel-loading-animation.gif';
 // styles
 import './LoadingMask.css';
 
-export default function LoadingMask() {
+export const LoadingMask = () => {
   return (
     <img
       className="loading-animation"
@@ -11,4 +11,4 @@ export default function LoadingMask() {
       alt="loading-animation"
     />
   );
-}
+};

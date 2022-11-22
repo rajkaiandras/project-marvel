@@ -3,7 +3,7 @@ import { useRef } from 'react';
 // styles
 import './CharacterCard.css';
 
-export default function CharacterCard({ name, imageUrl }) {
+export const CharacterCard = ({ name, imageUrl }) => {
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
@@ -42,4 +42,4 @@ export default function CharacterCard({ name, imageUrl }) {
       </p>
     </div>
   );
-}
+};

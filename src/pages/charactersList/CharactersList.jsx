@@ -8,9 +8,9 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 import { useFetch } from '../../hooks/useFetch';
 
 // components
-import LoadingMask from '../../components/loadingMask/LoadingMask';
-import CharacterCard from '../../components/characterCard/CharacterCard';
-import ScrollTop from '../../components/scrollTop/ScrollTop';
+import { LoadingMask } from '../../components/loadingMask/LoadingMask';
+import { CharacterCard } from '../../components/characterCard/CharacterCard';
+import { ScrollTop } from '../../components/scrollTop/ScrollTop';
 
 // styles
 import './CharactersList.css';

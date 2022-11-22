@@ -3,7 +3,7 @@ import { useState } from 'react';
 // styles
 import './ScrollTop.css';
 
-export default function ScrollTop() {
+export const ScrollTop = () => {
   const [visibility, setVisibility] = useState(false);
 
   window.addEventListener('scroll', () => {
@@ -32,4 +32,4 @@ export default function ScrollTop() {
       )}
     </button>
   );
-}
+};
