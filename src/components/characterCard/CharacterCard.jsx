@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import './CharacterCard.css';
 
 export const CharacterCard = ({ name, imageUrl }) => {
+  // card effect style
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();

@@ -1,9 +1,16 @@
 import React, { useRef } from 'react';
 
+// configs
+import { marvelApiConfig } from '../../configs/marvelApiConfig';
+
+// hooks
+import { useFetch } from '../../hooks/useFetch';
+
 // styles
 import './FavoriteCard.css';
 
-export const FavoriteCard = ({ name, imageUrl }) => {
+export const FavoriteCard = ({ characterId }) => {
+  // card effect style
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
@@ -22,9 +29,17 @@ export const FavoriteCard = ({ name, imageUrl }) => {
     characterName.current.style.color = 'gray';
   };
 
+  // fetching character details
+  const { apiCharactersEndpoint, timeStamp, publicApiKey, md5Hash } =
+    marvelApiConfig;
+  const apiCharacterDetailsEndpoint = `${apiCharactersEndpoint}/${characterId}`;
+  const { data, isPending, error } = useFetch(
+    `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
+  );
+
   return (
     <div
-      className="FavoriteCard"
+      className="CharacterCard"
       onMouseOver={onMouseOverHandler}
       onMouseLeave={onMouseLeaveHandler}
     >

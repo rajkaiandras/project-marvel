@@ -39,7 +39,7 @@ export const CharactersList = () => {
         {/* loading mask */}
         {isPending && <LoadingMask />}
 
-        {/* character display */}
+        {/* characters display */}
         {data &&
           data.data.results
             .filter(
