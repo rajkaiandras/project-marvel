@@ -1,9 +1,11 @@
 .FavoritesList {
   font-size: 1.25rem;
   font-weight: 300;
+  padding: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 30px;
   flex-grow: 1;
 }

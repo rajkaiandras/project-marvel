@@ -26,11 +26,13 @@ export const FavoritesList = () => {
 
       {/* characters display */}
       {documents &&
-        documents.map((document) => {
-          const { characterId } = document;
+        documents
+          .filter((document) => document.userId === user.uid)
+          .map((document) => {
+            const { characterId } = document;
 
-          return <FavoriteCard key={characterId} characterId={characterId} />;
-        })}
+            return <FavoriteCard key={characterId} characterId={characterId} />;
+          })}
     </div>
   );
 };

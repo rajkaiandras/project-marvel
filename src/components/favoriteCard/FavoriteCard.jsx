@@ -6,6 +6,9 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 // hooks
 import { useFetch } from '../../hooks/useFetch';
 
+// components
+import { LoadingMask } from '../../components/loadingMask/LoadingMask';
+
 // styles
 import './FavoriteCard.css';
 
@@ -37,24 +40,37 @@ export const FavoriteCard = ({ characterId }) => {
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
+  console.log(data);
+
   return (
-    <div
-      className="CharacterCard"
-      onMouseOver={onMouseOverHandler}
-      onMouseLeave={onMouseLeaveHandler}
-    >
-      <figure className="character-image-container">
-        <img
-          ref={characterImage}
-          className="character-image"
-          src={`${imageUrl}.jpg`}
-          alt={name}
-        />
-      </figure>
-      <hr ref={horizontalRule} />
-      <p ref={characterName} className="character-name">
-        {name}
-      </p>
-    </div>
+    <>
+      {/* error display */}
+      {error && <div className="error">{error}</div>}
+
+      {/* loading mask */}
+      {isPending && <LoadingMask />}
+
+      {/* character display */}
+      {data && (
+        <div
+          className="CharacterCard"
+          onMouseOver={onMouseOverHandler}
+          onMouseLeave={onMouseLeaveHandler}
+        >
+          <figure className="character-image-container">
+            <img
+              ref={characterImage}
+              className="character-image"
+              src={`${data.data.results[0].thumbnail.path}.jpg`}
+              alt={data.data.results[0].name}
+            />
+          </figure>
+          <hr ref={horizontalRule} />
+          <p ref={characterName} className="character-name">
+            {data.data.results[0].name}
+          </p>
+        </div>
+      )}
+    </>
   );
 };
