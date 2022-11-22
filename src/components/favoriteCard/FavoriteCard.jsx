@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 
 // styles
-import './CharacterCard.css';
+import './FavoriteCard.css';
 
-export const CharacterCard = ({ name, imageUrl }) => {
+export const FavoriteCard = ({ name, imageUrl }) => {
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
@@ -24,7 +24,7 @@ export const CharacterCard = ({ name, imageUrl }) => {
 
   return (
     <div
-      className="CharacterCard"
+      className="FavoriteCard"
       onMouseOver={onMouseOverHandler}
       onMouseLeave={onMouseLeaveHandler}
     >
