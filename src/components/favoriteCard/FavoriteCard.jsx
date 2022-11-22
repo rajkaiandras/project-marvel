@@ -5,6 +5,7 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 
 // hooks
 import { useFetch } from '../../hooks/useFetch';
+import { useFirestore } from '../../hooks/useFirestore';
 
 // components
 import { LoadingMask } from '../../components/loadingMask/LoadingMask';
@@ -12,7 +13,7 @@ import { LoadingMask } from '../../components/loadingMask/LoadingMask';
 // styles
 import './FavoriteCard.css';
 
-export const FavoriteCard = ({ characterId }) => {
+export const FavoriteCard = ({ documentId, characterId }) => {
   // card effect style
   const characterImage = useRef();
   const horizontalRule = useRef();
@@ -40,7 +41,8 @@ export const FavoriteCard = ({ characterId }) => {
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
-  console.log(data);
+  // delete character from favorite
+  const { deleteDocument } = useFirestore('favoriteCharacters');
 
   return (
     <>
@@ -53,7 +55,7 @@ export const FavoriteCard = ({ characterId }) => {
       {/* character display */}
       {data && (
         <div
-          className="CharacterCard"
+          className="FavoriteCard"
           onMouseOver={onMouseOverHandler}
           onMouseLeave={onMouseLeaveHandler}
         >
@@ -68,6 +70,9 @@ export const FavoriteCard = ({ characterId }) => {
           <hr ref={horizontalRule} />
           <p ref={characterName} className="character-name">
             {data.data.results[0].name}
+          </p>
+          <p className="unfavorite" onClick={() => deleteDocument(documentId)}>
+            X
           </p>
         </div>
       )}

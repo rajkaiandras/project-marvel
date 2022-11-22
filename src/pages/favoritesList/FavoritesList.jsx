@@ -29,9 +29,15 @@ export const FavoritesList = () => {
         documents
           .filter((document) => document.userId === user.uid)
           .map((document) => {
-            const { characterId } = document;
+            const { id: documentId, characterId } = document;
 
-            return <FavoriteCard key={characterId} characterId={characterId} />;
+            return (
+              <FavoriteCard
+                key={characterId}
+                documentId={documentId}
+                characterId={characterId}
+              />
+            );
           })}
     </div>
   );
