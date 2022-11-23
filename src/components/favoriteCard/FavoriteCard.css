@@ -3,7 +3,6 @@
 .FavoriteCard {
   width: 150px;
   height: 300px;
-  border-radius: 0 0 20px 0;
   background-color: #151515;
   position: relative;
 }
@@ -19,7 +18,12 @@
      object-fit: cover;
   transition: all 200ms ease-in-out;
 }
-.FavoriteCard hr {
+.FavoriteCard .character-name-container {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.FavoriteCard .character-name-container hr {
   width: 100%;
   height: 4px;
   border: none;
@@ -29,18 +33,29 @@
   z-index: 1;
   transition: all 200ms ease-in-out;
 }
-.FavoriteCard .character-name {
+.FavoriteCard .character-name-container .character-name {
+  padding: 50px 0 0 5px;
   font-weight: 700;
   text-align: left;
   color: gray;
-  margin: 30px 0 0 5px;
   position: relative;
   z-index: 2;
 }
+.FavoriteCard .character-name-container .fa-angle-right {
+  color: gray;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 3;
+}
 .FavoriteCard .unfavorite {
+  font-size: 30px;
   color: red;
   position: absolute;
   top: 5px;
   right: 5px;
   z-index: 2;
+}
+.FavoriteCard .unfavorite:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=FavoriteCard.css.map */

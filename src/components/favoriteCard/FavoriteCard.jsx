@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // configs
 import { marvelApiConfig } from '../../configs/marvelApiConfig';
@@ -18,19 +19,20 @@ export const FavoriteCard = ({ documentId, characterId }) => {
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
+  const faAngleRight = useRef();
 
   const onMouseOverHandler = () => {
     characterImage.current.style.transform = 'scale(1.1)';
-    horizontalRule.current.style.height = '145px';
-    horizontalRule.current.style.borderRadius = '0 0 20px 0';
+    horizontalRule.current.style.height = '150px';
     characterName.current.style.color = 'white';
+    faAngleRight.current.style.color = 'white';
   };
 
   const onMouseLeaveHandler = () => {
     characterImage.current.style.transform = 'scale(1)';
     horizontalRule.current.style.height = '4px';
-    horizontalRule.current.style.borderRadius = '0';
     characterName.current.style.color = 'gray';
+    faAngleRight.current.style.color = 'gray';
   };
 
   // fetching character details
@@ -67,10 +69,15 @@ export const FavoriteCard = ({ documentId, characterId }) => {
               alt={data.data.results[0].name}
             />
           </figure>
-          <hr ref={horizontalRule} />
-          <p ref={characterName} className="character-name">
-            {data.data.results[0].name}
-          </p>
+          <Link to={`/characters/${characterId}`}>
+            <div className="character-name-container">
+              <hr ref={horizontalRule} />
+              <p ref={characterName} className="character-name">
+                {data.data.results[0].name}
+              </p>
+              <i ref={faAngleRight} class="fa-solid fa-angle-right"></i>
+            </div>
+          </Link>
           <i
             className="unfavorite fa-solid fa-heart"
             onClick={() => deleteDocument(documentId)}
