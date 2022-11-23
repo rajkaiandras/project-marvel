@@ -36,7 +36,7 @@ export const CharacterDetails = () => {
 
   // checking (is card favorite at actual user)
   useEffect(() => {
-    if (documents) {
+    if (user && documents) {
       if (
         documents.some((document) => {
           return document.userId === user.uid && document.characterId === id;
@@ -90,11 +90,15 @@ export const CharacterDetails = () => {
               <hr />
             </div>
             <h3 className="character-name">{data.data.results[0].name}</h3>
-            {isFavorite && (
-              <i onClick={setUnFavorite} className="fa-solid fa-heart"></i>
-            )}
-            {!isFavorite && (
-              <i onClick={setFavorite} className="fa-regular fa-heart"></i>
+            {user && (
+              <>
+                {isFavorite && (
+                  <i onClick={setUnFavorite} className="fa-solid fa-heart"></i>
+                )}
+                {!isFavorite && (
+                  <i onClick={setFavorite} className="fa-regular fa-heart"></i>
+                )}
+              </>
             )}
           </div>
         </div>
