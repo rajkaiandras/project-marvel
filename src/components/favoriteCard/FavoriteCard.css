@@ -46,8 +46,8 @@
 .FavoriteCard .character-name-container .fa-angle-right {
   color: gray;
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   z-index: 3;
 }
 .FavoriteCard .unfavorite {

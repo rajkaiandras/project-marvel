@@ -1,7 +1,6 @@
 .CharacterCard {
   width: 150px;
   height: 300px;
-  border-radius: 0 0 20px 0;
   background-color: #151515;
   position: relative;
 }
@@ -28,10 +27,10 @@
   transition: all 200ms ease-in-out;
 }
 .CharacterCard .character-name {
+  margin: 50px 0 0 5px;
   font-weight: 700;
   text-align: left;
   color: gray;
-  margin: 30px 0 0 5px;
   position: relative;
   z-index: 2;
 }/*# sourceMappingURL=CharacterCard.css.map */
