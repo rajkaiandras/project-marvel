@@ -3,15 +3,14 @@
 
 .FavoriteCard {
   width: 150px;
-  height: 250px;
-  border: 2px solid gray;
+  height: 300px;
   border-radius: 0 0 20px 0;
-  background-color: #202020;
+  background-color: #151515;
   position: relative;
 
   .character-image-container {
-    width: 146px;
-    height: 146px;
+    width: 100%;
+    height: 50%;
     overflow: hidden;
 
     .character-image {

@@ -2,15 +2,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 .FavoriteCard {
   width: 150px;
-  height: 250px;
-  border: 2px solid gray;
+  height: 300px;
   border-radius: 0 0 20px 0;
-  background-color: #202020;
+  background-color: #151515;
   position: relative;
 }
 .FavoriteCard .character-image-container {
-  width: 146px;
-  height: 146px;
+  width: 100%;
+  height: 50%;
   overflow: hidden;
 }
 .FavoriteCard .character-image-container .character-image {

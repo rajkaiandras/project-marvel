@@ -11,7 +11,7 @@ export const CharacterCard = ({ name, imageUrl }) => {
 
   const onMouseOverHandler = () => {
     characterImage.current.style.transform = 'scale(1.1)';
-    horizontalRule.current.style.height = '100px';
+    horizontalRule.current.style.height = '145px';
     horizontalRule.current.style.borderRadius = '0 0 20px 0';
     characterName.current.style.color = 'white';
   };
