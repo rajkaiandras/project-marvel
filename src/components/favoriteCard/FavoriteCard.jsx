@@ -71,9 +71,10 @@ export const FavoriteCard = ({ documentId, characterId }) => {
           <p ref={characterName} className="character-name">
             {data.data.results[0].name}
           </p>
-          <p className="unfavorite" onClick={() => deleteDocument(documentId)}>
-            X
-          </p>
+          <i
+            className="unfavorite fa-solid fa-heart"
+            onClick={() => deleteDocument(documentId)}
+          ></i>
         </div>
       )}
     </>
