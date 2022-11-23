@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// database
+import { alphabet } from '../../database/alphabet';
 
 // configs
 import { marvelApiConfig } from '../../configs/marvelApiConfig';
@@ -16,11 +19,12 @@ import { ScrollTop } from '../../components/scrollTop/ScrollTop';
 import './CharactersList.css';
 
 export const CharactersList = () => {
-  // fetching characters list
+  const [nameStartLetter, setNameStartLetter] = useState('a');
+  // fetching characters
   const { apiCharactersEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
   const { data, isPending, error } = useFetch(
-    `${apiCharactersEndpoint}?limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
+    `${apiCharactersEndpoint}?nameStartsWith=${nameStartLetter}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
   return (
@@ -32,6 +36,17 @@ export const CharactersList = () => {
           House of Ideas!
         </p>
       </div>
+      <div className="alphabet-container">
+        {alphabet.map((letter, index) => (
+          <p
+            key={index}
+            className="letter"
+            onClick={() => setNameStartLetter(letter)}
+          >
+            {letter}
+          </p>
+        ))}
+      </div>
       <div className="character-cards-container">
         {/* error display */}
         {error && <div className="error">{error}</div>}
@@ -41,6 +56,7 @@ export const CharactersList = () => {
 
         {/* characters display */}
         {data &&
+          !isPending &&
           data.data.results
             .filter(
               (character) =>
