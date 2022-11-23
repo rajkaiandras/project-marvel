@@ -6,6 +6,7 @@ import { useCollection } from '../../hooks/useCollection';
 
 // components
 import { FavoriteCard } from '../../components/favoriteCard/FavoriteCard';
+import { LoadingMask } from '../../components/loadingMask/LoadingMask';
 
 // styles
 import './FavoritesList.css';
@@ -25,7 +26,9 @@ export const FavoritesList = () => {
       {error && <p>{error}</p>}
 
       {/* characters display */}
-      {documents &&
+      {!documents ? (
+        <LoadingMask />
+      ) : (
         documents
           .filter((document) => document.userId === user.uid)
           .map((document) => {
@@ -38,7 +41,8 @@ export const FavoritesList = () => {
                 characterId={characterId}
               />
             );
-          })}
+          })
+      )}
     </div>
   );
 };

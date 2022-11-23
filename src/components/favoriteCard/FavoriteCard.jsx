@@ -8,9 +8,6 @@ import { marvelApiConfig } from '../../configs/marvelApiConfig';
 import { useFetch } from '../../hooks/useFetch';
 import { useFirestore } from '../../hooks/useFirestore';
 
-// components
-import { LoadingMask } from '../../components/loadingMask/LoadingMask';
-
 // styles
 import './FavoriteCard.css';
 
@@ -47,7 +44,7 @@ export const FavoriteCard = ({ documentId, characterId }) => {
   const { apiCharactersEndpoint, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
   const apiCharacterDetailsEndpoint = `${apiCharactersEndpoint}/${characterId}`;
-  const { data, isPending, error } = useFetch(
+  const { data, error } = useFetch(
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
@@ -58,9 +55,6 @@ export const FavoriteCard = ({ documentId, characterId }) => {
     <>
       {/* error display */}
       {error && <div className="error">{error}</div>}
-
-      {/* loading mask */}
-      {isPending && <LoadingMask />}
 
       {/* character display */}
       {data && (
@@ -84,7 +78,7 @@ export const FavoriteCard = ({ documentId, characterId }) => {
               <p ref={characterName} className="character-name">
                 {data.data.results[0].name}
               </p>
-              <i ref={faAngleRight} class="fa-solid fa-angle-right"></i>
+              <i ref={faAngleRight} className="fa-solid fa-angle-right"></i>
             </div>
           </Link>
           <i
