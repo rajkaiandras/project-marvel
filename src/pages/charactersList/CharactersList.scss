@@ -38,11 +38,14 @@
   }
 
   .character-cards-container {
+    width: 100%;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
+    flex-grow: 1;
+    background-color: #202020;
   }
 }
