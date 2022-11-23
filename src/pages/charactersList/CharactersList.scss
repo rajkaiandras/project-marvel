@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
+  background-color: #2c2c2c;
 
   .title-container {
     width: 100%;
@@ -34,18 +35,54 @@
     }
   }
 
+  .search-bar {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+
+    .fa-magnifying-glass {
+      font-size: 25px;
+      color: gray;
+    }
+
+    .search-input {
+      width: 300px;
+      height: 40px;
+      margin-left: 10px;
+      border: none;
+      border-bottom: 2px solid gray;
+      outline: none;
+      font-size: 20px;
+      color: gray;
+      background-color: #2c2c2c;
+
+      &::placeholder {
+        color: gray;
+      }
+    }
+  }
+
   .alphabet-container {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid gray;
+    margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #151515;
+    background-color: #2c2c2c;
 
     .letter {
-      color: white;
+      font-weight: 500;
+      color: gray;
       cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
     }
   }
 

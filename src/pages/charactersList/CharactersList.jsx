@@ -36,6 +36,14 @@ export const CharactersList = () => {
           House of Ideas!
         </p>
       </div>
+      <label className="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search character by name..."
+        ></input>
+      </label>
       <div className="alphabet-container">
         {alphabet.map((letter, index) => (
           <p
