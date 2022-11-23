@@ -31,6 +31,9 @@ export const FavoritesList = () => {
       ) : (
         documents
           .filter((document) => document.userId === user.uid)
+          .sort((a, b) => {
+            return a.createdAt.seconds - b.createdAt.seconds;
+          })
           .map((document) => {
             const { id: documentId, characterId } = document;
 

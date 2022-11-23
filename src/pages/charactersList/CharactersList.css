@@ -42,6 +42,7 @@
 }
 .CharactersList .alphabet-container .letter {
   color: white;
+  cursor: pointer;
 }
 .CharactersList .error {
   color: red;

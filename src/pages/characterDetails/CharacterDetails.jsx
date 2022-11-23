@@ -43,7 +43,7 @@ export const CharacterDetails = () => {
         setIsFavorite(true);
       }
     }
-  }, [user, documents]);
+  }, [user, documents, id]);
 
   // set character to favorite
   const setFavorite = () => {

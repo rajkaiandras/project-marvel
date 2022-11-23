@@ -76,6 +76,9 @@
     font-size: 1.25rem;
   }
 }
+.CharacterDetails .details-container .content .fa-heart:hover {
+  cursor: pointer;
+}
 .CharacterDetails .details-container .content .fa-regular {
   font-size: 2rem;
   text-align: right;
