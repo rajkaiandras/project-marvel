@@ -6,6 +6,8 @@
   height: 300px;
   background-color: #151515;
   position: relative;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
 
   .character-image-container {
     width: 100%;

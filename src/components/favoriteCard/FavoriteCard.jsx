@@ -16,6 +16,7 @@ import './FavoriteCard.css';
 
 export const FavoriteCard = ({ documentId, characterId }) => {
   // card effect style
+  const FavoriteCard = useRef();
   const characterImage = useRef();
   const horizontalRule = useRef();
   const characterName = useRef();
@@ -33,6 +34,13 @@ export const FavoriteCard = ({ documentId, characterId }) => {
     horizontalRule.current.style.height = '4px';
     characterName.current.style.color = 'gray';
     faAngleRight.current.style.color = 'gray';
+  };
+
+  const unfavoriteCharacter = () => {
+    FavoriteCard.current.style.opacity = '0';
+    setTimeout(() => {
+      deleteDocument(documentId);
+    }, 500);
   };
 
   // fetching character details
@@ -58,6 +66,7 @@ export const FavoriteCard = ({ documentId, characterId }) => {
       {data && (
         <div
           className="FavoriteCard"
+          ref={FavoriteCard}
           onMouseOver={onMouseOverHandler}
           onMouseLeave={onMouseLeaveHandler}
         >
@@ -80,7 +89,7 @@ export const FavoriteCard = ({ documentId, characterId }) => {
           </Link>
           <i
             className="unfavorite fa-solid fa-heart"
-            onClick={() => deleteDocument(documentId)}
+            onClick={unfavoriteCharacter}
           ></i>
         </div>
       )}
