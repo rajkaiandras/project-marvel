@@ -20,9 +20,16 @@ import './CharactersList.css';
 
 export const CharactersList = () => {
   const [nameStartLetter, setNameStartLetter] = useState('a');
+  const [searchInput, setSearchInput] = useState('');
+
   // fetching characters
   const { apiCharactersEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
+  // by search input
+  /* const { data, isPending, error } = useFetch(
+    `${apiCharactersEndpoint}?name=${searchInput}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
+  ); */
+  // by alphabetic letters
   const { data, isPending, error } = useFetch(
     `${apiCharactersEndpoint}?nameStartsWith=${nameStartLetter}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
@@ -41,7 +48,11 @@ export const CharactersList = () => {
         <input
           className="search-input"
           type="text"
+          value={searchInput}
           placeholder="Search character by name..."
+          onChange={(e) => {
+            setSearchInput(e.target.value);
+          }}
         ></input>
       </label>
       <div className="alphabet-container">
