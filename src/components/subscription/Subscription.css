@@ -10,7 +10,7 @@
 }
 .subscription-backdrop .subscription-content {
   display: flex;
-  border: 1px solid gray;
+  border: 2px solid gray;
   position: fixed;
   top: calc(50vh - 150px);
   left: calc(50vw - 300px);
