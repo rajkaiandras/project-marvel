@@ -1,13 +1,14 @@
 .FavoriteCard {
   width: 150px;
   height: 250px;
+  border: 2px solid gray;
   border-radius: 0 0 20px 0;
   background-color: #202020;
   position: relative;
 }
 .FavoriteCard .character-image-container {
-  width: 150px;
-  height: 150px;
+  width: 146px;
+  height: 146px;
   overflow: hidden;
 }
 .FavoriteCard .character-image-container .character-image {

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  background-color: #2c2c2c;
 
   .sign-up-form {
     width: 300px;
@@ -14,7 +15,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: var(--heading-clr);
+      color: white;
     }
 
     label {
@@ -32,6 +33,7 @@
       border-radius: 0;
       outline: none;
       color: var(--font-clr);
+      background-color: #202020;
     }
 
     .sign-up-btn {
