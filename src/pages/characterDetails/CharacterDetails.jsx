@@ -19,10 +19,8 @@ import './CharacterDetails.css';
 export const CharacterDetails = () => {
   const { user } = useAuthContext();
   const [isFavorite, setIsFavorite] = useState(false);
-  const { documents, error: collectionError } =
-    useCollection('favoriteCharacters');
-  const { addDocument, deleteDocument, response } =
-    useFirestore('favoriteCharacters');
+  const { documents } = useCollection('favoriteCharacters');
+  const { addDocument, deleteDocument } = useFirestore('favoriteCharacters');
 
   // fetching character details
   const { apiCharactersEndpoint, timeStamp, publicApiKey, md5Hash } =
@@ -45,7 +43,7 @@ export const CharacterDetails = () => {
         setIsFavorite(true);
       }
     }
-  }, [documents]);
+  }, [user, documents]);
 
   // set character to favorite
   const setFavorite = () => {
@@ -59,7 +57,10 @@ export const CharacterDetails = () => {
   // set character to unfavorite
   const setUnFavorite = () => {
     setIsFavorite(false);
-    /* deleteDocument(documentId); */
+    const filtered = documents.filter((document) => {
+      return document.characterId === id;
+    });
+    deleteDocument(filtered[0].id);
   };
 
   return (
