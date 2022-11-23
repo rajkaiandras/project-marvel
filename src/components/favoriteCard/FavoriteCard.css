@@ -6,7 +6,7 @@
   background-color: #151515;
   position: relative;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .FavoriteCard .character-image-container {
   width: 100%;
