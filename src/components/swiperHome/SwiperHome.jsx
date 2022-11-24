@@ -39,7 +39,14 @@ export const SwiperHome = () => {
       {swiperSlideImages.map((image, index) => {
         return (
           <SwiperSlide key={index}>
-            <img src={image} alt="marvel heroes" />
+            <div className="slide-content">
+              <h1 className="slide-title">Heroes live among us</h1>
+              <h3 className="slide-subtitle">
+                Discover the power of comic books
+              </h3>
+              <button>More heroes</button>
+            </div>
+            <img className="slide-bg" src={image} alt="marvel heroes" />
           </SwiperSlide>
         );
       })}
