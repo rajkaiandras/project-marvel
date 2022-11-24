@@ -5,4 +5,7 @@
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
   color: red;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: red;
 }/*# sourceMappingURL=SwiperHome.css.map */
