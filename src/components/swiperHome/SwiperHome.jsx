@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,6 +18,7 @@ import './SwiperHome.css';
 import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
+import { MoreBtn } from '../buttons/moreBtn/MoreBtn';
 
 const swiperSlideImages = [
   swiperSlideImage1,
@@ -44,7 +46,9 @@ export const SwiperHome = () => {
               <h3 className="slide-subtitle">
                 Discover the power of comic books
               </h3>
-              <button>More heroes</button>
+              <Link to="/characters">
+                <MoreBtn />
+              </Link>
             </div>
             <img className="slide-bg" src={image} alt="marvel heroes" />
           </SwiperSlide>
