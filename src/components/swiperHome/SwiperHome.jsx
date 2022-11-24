@@ -1,68 +1,45 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-// swiper and swiper modules
-import Swiper, { Navigation, Pagination, SwiperSlide, Autoplay } from 'swiper';
+// swiper modules
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, EffectFade } from 'swiper';
+
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
 
 // styles
 import './SwiperHome.css';
 
+// slide images
+import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
+import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
+import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
+
+const swiperSlideImages = [
+  swiperSlideImage1,
+  swiperSlideImage2,
+  swiperSlideImage3,
+];
+
 export const SwiperHome = () => {
-  const swiper = new Swiper('.swiper', {
-    // modules
-    modules: [Navigation, Pagination, Autoplay],
-
-    // Optional parameters
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 3000,
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
-
   return (
-    /* Slider main container */
-    <div className="swiper">
-      {/* Additional required wrapper */}
-      <div className="swiper-wrapper">
-        {/* Slides */}
-        <div className="swiper-slide slide-1"></div>
-        <div className="swiper-slide slide-2"></div>
-        <div className="swiper-slide slide-3"></div>
-      </div>
-      {/* If we need pagination */}
-      <div className="swiper-pagination"></div>
-
-      {/* If we need navigation buttons */}
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
-
-      {/* If we need scrollbar */}
-      <div className="swiper-scrollbar"></div>
-    </div>
+    <Swiper
+      modules={[Navigation, EffectFade]}
+      navigation
+      effect={'fade'}
+      speed={1000}
+      slidesPerView={1}
+      loop
+    >
+      {swiperSlideImages.map((image, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <img src={image} alt="marvel heroes" />
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
   );
 };
