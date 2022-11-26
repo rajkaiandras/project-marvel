@@ -1,11 +1,35 @@
 .Footer {
   height: 100px;
   border-top: 1px solid gray;
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
   background-color: #151515;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .developer-container {
+    margin-bottom: 20px;
+
+    .developer-name {
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: dodgerblue;
+    }
+  }
+
+  .footer-links-container {
+    width: 640px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-weight: 300;
+      color: gray;
+    }
+  }
 }
