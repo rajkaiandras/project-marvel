@@ -1,0 +1,163 @@
+.MarvelLogo {
+  width: 203px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transform: scaleY(150%);
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  z-index: 2;
+  opacity: 1;
+  animation-name: logo-bg-animation;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+
+  @keyframes logo-bg-animation {
+    0% {
+      width: 43.5px;
+      opacity: 0;
+    }
+    20% {
+      width: 43.5px;
+      opacity: 1;
+    }
+    65% {
+      width: 43.5px;
+      opacity: 1;
+    }
+    100% {
+      width: 203px;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    transform: scaleY(100%);
+  }
+
+  .logo-letter-m {
+    opacity: 1;
+    animation-name: letter-m-animation;
+    animation-duration: 6s;
+  }
+
+  @keyframes letter-m-animation {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-letter-a {
+    opacity: 1;
+    animation-name: letter-a-animation;
+    animation-duration: 4s;
+  }
+
+  @keyframes letter-a-animation {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-letter-r {
+    opacity: 1;
+    animation-name: letter-r-animation;
+    animation-duration: 4s;
+  }
+
+  @keyframes letter-r-animation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-letter-v {
+    opacity: 1;
+    animation-name: letter-v-animation;
+    animation-duration: 4s;
+  }
+
+  @keyframes letter-v-animation {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-letter-e {
+    opacity: 1;
+    animation-name: letter-e-animation;
+    animation-duration: 4s;
+  }
+
+  @keyframes letter-e-animation {
+    0% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-letter-l {
+    opacity: 1;
+    animation-name: letter-l-animation;
+    animation-duration: 4s;
+  }
+
+  @keyframes letter-l-animation {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

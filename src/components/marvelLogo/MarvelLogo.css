@@ -1,0 +1,265 @@
+.MarvelLogo {
+  width: 203px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transform: scaleY(150%);
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  z-index: 2;
+  opacity: 1;
+  -webkit-animation-name: logo-bg-animation;
+          animation-name: logo-bg-animation;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes logo-bg-animation {
+  0% {
+    width: 43.5px;
+    opacity: 0;
+  }
+  20% {
+    width: 43.5px;
+    opacity: 1;
+  }
+  65% {
+    width: 43.5px;
+    opacity: 1;
+  }
+  100% {
+    width: 203px;
+    opacity: 1;
+  }
+}
+@keyframes logo-bg-animation {
+  0% {
+    width: 43.5px;
+    opacity: 0;
+  }
+  20% {
+    width: 43.5px;
+    opacity: 1;
+  }
+  65% {
+    width: 43.5px;
+    opacity: 1;
+  }
+  100% {
+    width: 203px;
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .MarvelLogo {
+    transform: scaleY(100%);
+  }
+}
+.MarvelLogo .logo-letter-m {
+  opacity: 1;
+  -webkit-animation-name: letter-m-animation;
+          animation-name: letter-m-animation;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+@-webkit-keyframes letter-m-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-m-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.MarvelLogo .logo-letter-a {
+  opacity: 1;
+  -webkit-animation-name: letter-a-animation;
+          animation-name: letter-a-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-a-animation {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-a-animation {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.MarvelLogo .logo-letter-r {
+  opacity: 1;
+  -webkit-animation-name: letter-r-animation;
+          animation-name: letter-r-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-r-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-r-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.MarvelLogo .logo-letter-v {
+  opacity: 1;
+  -webkit-animation-name: letter-v-animation;
+          animation-name: letter-v-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-v-animation {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-v-animation {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.MarvelLogo .logo-letter-e {
+  opacity: 1;
+  -webkit-animation-name: letter-e-animation;
+          animation-name: letter-e-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-e-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-e-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.MarvelLogo .logo-letter-l {
+  opacity: 1;
+  -webkit-animation-name: letter-l-animation;
+          animation-name: letter-l-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-l-animation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-l-animation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=MarvelLogo.css.map */

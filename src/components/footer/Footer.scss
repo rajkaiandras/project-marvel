@@ -5,6 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: footer-visibility;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+
+  @keyframes footer-visibility {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 
   .developer-container {
     width: 150px;
