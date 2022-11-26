@@ -14,18 +14,262 @@
   }
 }
 .Header .logo {
-  padding: 0 5px;
+  width: 183px;
   font-size: 3rem;
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: -2px;
   transform: scaleY(150%);
   color: white;
   background-color: red;
+  opacity: 1;
+  -webkit-animation-name: logo-bg-animation;
+          animation-name: logo-bg-animation;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+@-webkit-keyframes logo-bg-animation {
+  0% {
+    width: 44px;
+    opacity: 0;
+  }
+  20% {
+    width: 44px;
+    opacity: 1;
+  }
+  40% {
+    width: 183px;
+    opacity: 1;
+  }
+  100% {
+    width: 183px;
+    opacity: 1;
+  }
+}
+@keyframes logo-bg-animation {
+  0% {
+    width: 44px;
+    opacity: 0;
+  }
+  20% {
+    width: 44px;
+    opacity: 1;
+  }
+  40% {
+    width: 183px;
+    opacity: 1;
+  }
+  100% {
+    width: 183px;
+    opacity: 1;
+  }
 }
 @media (max-width: 600px) {
   .Header .logo {
     transform: scaleY(100%);
+  }
+}
+.Header .logo .logo-letter-m {
+  opacity: 1;
+  -webkit-animation-name: letter-m-animation;
+          animation-name: letter-m-animation;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+@-webkit-keyframes letter-m-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-m-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Header .logo .logo-letter-a {
+  opacity: 1;
+  -webkit-animation-name: letter-a-animation;
+          animation-name: letter-a-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-a-animation {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-a-animation {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Header .logo .logo-letter-r {
+  opacity: 1;
+  -webkit-animation-name: letter-r-animation;
+          animation-name: letter-r-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-r-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-r-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Header .logo .logo-letter-v {
+  opacity: 1;
+  -webkit-animation-name: letter-v-animation;
+          animation-name: letter-v-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-v-animation {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-v-animation {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Header .logo .logo-letter-e {
+  opacity: 1;
+  -webkit-animation-name: letter-e-animation;
+          animation-name: letter-e-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-e-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-e-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Header .logo .logo-letter-l {
+  opacity: 1;
+  -webkit-animation-name: letter-l-animation;
+          animation-name: letter-l-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes letter-l-animation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes letter-l-animation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .Header .nav-bar {
