@@ -8,7 +8,10 @@ export const Footer = () => {
   return (
     <footer className="Footer">
       <div className="developer-container">
-        developed by <span className="developer-name">András Rajkai</span>
+        <p className="developer-title">developed by</p>
+        <a href="http://www.linkedin.com/in/andrasrajkai">
+          <p className="developer-name">AR</p>
+        </a>
       </div>
       <div className="footer-links-container">
         <Link to="/aboutme">about me</Link>
