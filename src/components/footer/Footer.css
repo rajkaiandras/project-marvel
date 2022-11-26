@@ -5,23 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* animation-name: footer-visibility;
-  animation-duration: 9s;
-  animation-timing-function: ease-in-out;
-
-  @keyframes footer-visibility {
-    0% {
-      opacity: 0;
-    }
-
-    90% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  } */
 }
 .Footer .developer-container {
   width: 150px;
@@ -35,7 +18,7 @@
 .Footer .developer-container .developer-name {
   font-family: "Rubik Glitch", cursive;
   font-size: 50px;
-  text-shadow: 1px 1px yellow;
+  text-shadow: 2px 2px yellow;
   color: red;
 }
 .Footer .footer-links-container {
@@ -47,4 +30,7 @@
 .Footer .footer-links-container a {
   font-weight: 300;
   color: gray;
+}
+.Footer .footer-links-container a:hover {
+  color: red;
 }/*# sourceMappingURL=Footer.css.map */

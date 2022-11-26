@@ -6,23 +6,6 @@
   justify-content: flex-end;
   align-items: center;
   background-color: #151515;
-  /* animation-name: header-visibility;
-  animation-duration: 8s;
-  animation-timing-function: ease-in-out;
-
-  @keyframes header-visibility {
-    0% {
-      opacity: 0;
-    }
-
-    90% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  } */
 }
 @media (max-width: 600px) {
   .Header {

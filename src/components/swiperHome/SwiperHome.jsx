@@ -35,7 +35,7 @@ export const SwiperHome = () => {
       pagination
       autoplay
       effect={'fade'}
-      speed={2000}
+      speed={3000}
       slidesPerView={1}
       loop
     >
