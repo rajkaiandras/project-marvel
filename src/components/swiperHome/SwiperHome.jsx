@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // swiper modules
@@ -11,6 +10,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
+// components
+import { ArrowBtn } from '../buttons/arrowBtn/ArrowBtn';
+
 // styles
 import './SwiperHome.css';
 
@@ -18,7 +20,6 @@ import './SwiperHome.css';
 import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
-import { MoreBtn } from '../buttons/moreBtn/MoreBtn';
 
 const swiperSlideImages = [
   swiperSlideImage1,
@@ -47,7 +48,7 @@ export const SwiperHome = () => {
                 Discover the power of comic books
               </h3>
               <Link to="/characters">
-                <MoreBtn />
+                <ArrowBtn />
               </Link>
             </div>
             <img className="slide-bg" src={image} alt="marvel heroes" />

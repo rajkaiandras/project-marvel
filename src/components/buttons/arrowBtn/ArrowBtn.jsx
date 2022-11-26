@@ -1,9 +1,9 @@
 import React from 'react';
 
 // styles
-import './MoreBtn.css';
+import './ArrowBtn.css';
 
-export const MoreBtn = () => {
+export const ArrowBtn = () => {
   return (
     <div className="wrapper">
       <a className="cta" href="#">
