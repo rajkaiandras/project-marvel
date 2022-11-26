@@ -29,6 +29,12 @@
   color: white;
   text-shadow: 1px 1px black;
 }
+.swiper .slide-content .link-to-arrow-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .swiper .slide-bg {
   width: 100%;
   height: 100%;

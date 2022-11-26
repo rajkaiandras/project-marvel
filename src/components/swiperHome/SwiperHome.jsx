@@ -47,7 +47,7 @@ export const SwiperHome = () => {
               <h3 className="slide-subtitle">
                 Discover the power of comic books
               </h3>
-              <Link to="/characters">
+              <Link className="link-to-arrow-btn" to="/characters">
                 <ArrowBtn />
               </Link>
             </div>
