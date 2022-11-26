@@ -14,10 +14,10 @@
   }
 }
 .Header .logo {
-  width: 183px;
+  width: 203px;
   font-size: 3rem;
   font-weight: 900;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
   transform: scaleY(150%);
   color: white;
   background-color: red;
@@ -26,40 +26,42 @@
           animation-name: logo-bg-animation;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 @-webkit-keyframes logo-bg-animation {
   0% {
-    width: 44px;
+    width: 43.5px;
     opacity: 0;
   }
   20% {
-    width: 44px;
+    width: 43.5px;
     opacity: 1;
   }
-  40% {
-    width: 183px;
+  65% {
+    width: 43.5px;
     opacity: 1;
   }
   100% {
-    width: 183px;
+    width: 203px;
     opacity: 1;
   }
 }
 @keyframes logo-bg-animation {
   0% {
-    width: 44px;
+    width: 43.5px;
     opacity: 0;
   }
   20% {
-    width: 44px;
+    width: 43.5px;
     opacity: 1;
   }
-  40% {
-    width: 183px;
+  65% {
+    width: 43.5px;
     opacity: 1;
   }
   100% {
-    width: 183px;
+    width: 203px;
     opacity: 1;
   }
 }
