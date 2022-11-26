@@ -14,13 +14,15 @@ import { Subscription } from './components/subscription/Subscription';
 import { Home } from './pages/home/Home';
 import { CharactersList } from './pages/charactersList/CharactersList';
 import { CharacterDetails } from './pages/characterDetails/CharacterDetails';
+import { FavoritesList } from './pages/favoritesList/FavoritesList';
 import { UserProfile } from './pages/userProfile/UserProfile';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
+import { AboutMe } from './pages/aboutMe/AboutMe';
+import { Contacts } from './pages/contacts/Contacts';
 
 // styles
 import './Marvel.css';
-import { FavoritesList } from './pages/favoritesList/FavoritesList';
 
 export const Marvel = () => {
   const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
@@ -63,6 +65,8 @@ export const Marvel = () => {
               path="/signup"
               element={!user ? <SignUp /> : <Navigate to="/userprofile" />}
             />
+            <Route path="/aboutme" element={<AboutMe />} />
+            <Route path="/contacts" element={<Contacts />} />
           </Routes>
           <Footer />
           <Feedback />
