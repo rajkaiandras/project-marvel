@@ -6,32 +6,21 @@
   align-items: center;
   flex-grow: 1;
   background-color: #2c2c2c;
-  -webkit-animation-name: home-visibility;
-          animation-name: home-visibility;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes home-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes home-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  /* animation-name: home-visibility;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+
+  @keyframes home-visibility {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  } */
 }/*# sourceMappingURL=Home.css.map */

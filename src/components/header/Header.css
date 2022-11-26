@@ -6,34 +6,23 @@
   justify-content: flex-end;
   align-items: center;
   background-color: #151515;
-  -webkit-animation-name: header-visibility;
-          animation-name: header-visibility;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes header-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes header-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  /* animation-name: header-visibility;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+
+  @keyframes header-visibility {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  } */
 }
 @media (max-width: 600px) {
   .Header {

@@ -6,6 +6,7 @@ import { useAuthContext } from './hooks/useAuthContext';
 
 // components
 import { MarvelLogo } from './components/marvelLogo/MarvelLogo';
+import { Intro } from './components/intro/Intro';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { Feedback } from './components/feedback/Feedback';
@@ -27,8 +28,15 @@ import './Marvel.css';
 
 export const Marvel = () => {
   const [subscriptionVisibility, setSubscriptionVisibility] = useState(false);
+  const [isIntro, setIsIntro] = useState(true);
   const { authIsReady, user } = useAuthContext();
 
+  // intro unmounting
+  setTimeout(() => {
+    setIsIntro(false);
+  }, 8000);
+
+  // subscription visibility
   useEffect(() => {
     setTimeout(() => {
       if (!user) {
@@ -46,6 +54,7 @@ export const Marvel = () => {
       {authIsReady && (
         <>
           <MarvelLogo />
+          {isIntro && <Intro />}
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

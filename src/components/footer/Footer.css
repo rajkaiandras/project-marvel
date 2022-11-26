@@ -5,34 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation-name: footer-visibility;
-          animation-name: footer-visibility;
-  -webkit-animation-duration: 9s;
-          animation-duration: 9s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes footer-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes footer-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  /* animation-name: footer-visibility;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+
+  @keyframes footer-visibility {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  } */
 }
 .Footer .developer-container {
   width: 150px;
