@@ -13,7 +13,7 @@
     position: relative;
     left: 100vw;
     animation-name: header-cover-visibility;
-    animation-duration: 8s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
 
     @keyframes header-cover-visibility {
@@ -36,7 +36,7 @@
     position: relative;
     right: 100vw;
     animation-name: content-cover-visibility;
-    animation-duration: 8s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
 
     @keyframes content-cover-visibility {
@@ -59,7 +59,7 @@
     position: relative;
     left: 100vw;
     animation-name: footer-cover-visibility;
-    animation-duration: 8s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
 
     @keyframes footer-cover-visibility {

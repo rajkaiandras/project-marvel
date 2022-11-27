@@ -42,7 +42,7 @@ export const Marvel = () => {
       if (!user) {
         setSubscriptionVisibility(true);
       }
-    }, 15000);
+    }, 30000);
   }, []);
 
   const closeSubscription = () => {

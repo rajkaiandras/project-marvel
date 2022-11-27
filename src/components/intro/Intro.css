@@ -14,8 +14,8 @@
   left: 100vw;
   -webkit-animation-name: header-cover-visibility;
           animation-name: header-cover-visibility;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
@@ -49,8 +49,8 @@
   right: 100vw;
   -webkit-animation-name: content-cover-visibility;
           animation-name: content-cover-visibility;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
@@ -84,8 +84,8 @@
   left: 100vw;
   -webkit-animation-name: footer-cover-visibility;
           animation-name: footer-cover-visibility;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
