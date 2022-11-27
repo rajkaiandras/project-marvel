@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
@@ -10,9 +8,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-// components
-import { ArrowBtn } from '../buttons/arrowBtn/ArrowBtn';
-
 // styles
 import './SwiperHome.css';
 
@@ -21,7 +16,7 @@ import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
 
-// databases
+// database
 const swiperSlideDB = [
   {
     title: 'Captain Marvel',
