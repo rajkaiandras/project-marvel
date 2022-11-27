@@ -44,7 +44,7 @@ export const CharactersList = () => {
         </p>
       </div>
       <label className="search-bar">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
         <input
           className="search-input"
           type="text"

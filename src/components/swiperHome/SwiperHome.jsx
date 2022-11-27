@@ -15,6 +15,7 @@ import './SwiperHome.css';
 import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
+import disneyLogo from '../../assets/svgs/disney-logo.svg';
 
 // database
 const swiperSlideDB = [
@@ -51,6 +52,7 @@ export const SwiperHome = () => {
         return (
           <SwiperSlide key={index}>
             <div className="slide-content">
+              <img className="disney-logo" src={disneyLogo} alt="disney logo" />
               <h1 className="slide-title">{slide.title}</h1>
               <h3 className="slide-subtitle">{slide.subtitle}</h3>
             </div>

@@ -12,8 +12,12 @@
 }
 .swiper .slide-content {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 100px;
+}
+.swiper .slide-content .disney-logo {
+  width: 100px;
+  margin-bottom: 30px;
 }
 .swiper .slide-content .slide-title {
   font-size: 60px;
@@ -21,9 +25,9 @@
   color: white;
   text-shadow: 1px 1px black;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .swiper .slide-content .slide-subtitle {
-  margin: 20px 0;
   font-size: 30px;
   font-weight: 500;
   color: white;
