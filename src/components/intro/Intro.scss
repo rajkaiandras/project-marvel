@@ -35,6 +35,10 @@
     background-color: #151515;
     position: relative;
     right: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     animation-name: content-cover-visibility;
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
@@ -48,6 +52,117 @@
       }
       100% {
         right: 100vw;
+      }
+    }
+
+    .title-container {
+      width: 700px;
+      height: 60px;
+      position: relative;
+      left: 75px;
+      bottom: 0;
+
+      .hero-title {
+        width: 700;
+        height: 60px;
+        font-size: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .hero-title-cover {
+        width: 700px;
+        height: 60px;
+        background-color: #151515;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        animation-name: hero-title-visibility;
+        animation-duration: 5s;
+      }
+
+      @keyframes hero-title-visibility {
+        0% {
+          top: 0;
+        }
+        25% {
+          top: 0;
+        }
+        50% {
+          top: -60px;
+        }
+        70% {
+          top: -60px;
+        }
+        100% {
+          top: -0;
+        }
+      }
+    }
+
+    .subtitle-container {
+      width: 700px;
+      height: 30px;
+      position: relative;
+
+      .hero-subtitle {
+        width: 700;
+        height: 30px;
+        font-size: 30px;
+        font-weight: 300;
+        opacity: 1;
+        color: white;
+        animation-name: hero-subtitle-show;
+        animation-duration: 5s;
+      }
+
+      @keyframes hero-subtitle-show {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .power-highlight {
+        color: red;
+        font-weight: 700;
+      }
+
+      .hero-subtitle-cover {
+        width: 700px;
+        height: 30px;
+        background-color: #151515;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        animation-name: hero-subtitle-hide;
+        animation-duration: 5s;
+      }
+
+      @keyframes hero-subtitle-hide {
+        0% {
+          width: 0;
+        }
+        50% {
+          width: 0;
+        }
+        80% {
+          width: 700px;
+        }
+        100% {
+          width: 700px;
+        }
       }
     }
   }

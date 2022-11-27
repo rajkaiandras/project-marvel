@@ -12,25 +12,18 @@
   z-index: 3;
   opacity: 1;
   animation-name: logo-bg-animation;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-timing-function: ease-in-out;
 
   @keyframes logo-bg-animation {
     0% {
-      width: 43.5px;
-      opacity: 0;
+      background-color: transparent;
     }
-    20% {
-      width: 43.5px;
-      opacity: 1;
-    }
-    65% {
-      width: 43.5px;
-      opacity: 1;
+    90% {
+      background-color: transparent;
     }
     100% {
-      width: 203px;
-      opacity: 1;
+      background-color: red;
     }
   }
 
@@ -41,14 +34,14 @@
   .logo-letter-m {
     opacity: 1;
     animation-name: letter-m-animation;
-    animation-duration: 6s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-m-animation {
     0% {
       opacity: 0;
     }
-    20% {
+    70% {
       opacity: 1;
     }
     100% {
@@ -59,17 +52,17 @@
   .logo-letter-a {
     opacity: 1;
     animation-name: letter-a-animation;
-    animation-duration: 4s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-a-animation {
     0% {
       opacity: 0;
     }
-    40% {
+    70% {
       opacity: 0;
     }
-    50% {
+    75% {
       opacity: 1;
     }
     100% {
@@ -80,17 +73,17 @@
   .logo-letter-r {
     opacity: 1;
     animation-name: letter-r-animation;
-    animation-duration: 4s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-r-animation {
     0% {
       opacity: 0;
     }
-    50% {
+    75% {
       opacity: 0;
     }
-    60% {
+    80% {
       opacity: 1;
     }
     100% {
@@ -101,17 +94,17 @@
   .logo-letter-v {
     opacity: 1;
     animation-name: letter-v-animation;
-    animation-duration: 4s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-v-animation {
     0% {
       opacity: 0;
     }
-    60% {
+    80% {
       opacity: 0;
     }
-    70% {
+    85% {
       opacity: 1;
     }
     100% {
@@ -122,17 +115,17 @@
   .logo-letter-e {
     opacity: 1;
     animation-name: letter-e-animation;
-    animation-duration: 4s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-e-animation {
     0% {
       opacity: 0;
     }
-    70% {
+    85% {
       opacity: 0;
     }
-    80% {
+    90% {
       opacity: 1;
     }
     100% {
@@ -143,17 +136,17 @@
   .logo-letter-l {
     opacity: 1;
     animation-name: letter-l-animation;
-    animation-duration: 4s;
+    animation-duration: 9s;
   }
 
   @keyframes letter-l-animation {
     0% {
       opacity: 0;
     }
-    80% {
+    90% {
       opacity: 0;
     }
-    90% {
+    95% {
       opacity: 1;
     }
     100% {

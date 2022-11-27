@@ -35,7 +35,7 @@ export const Marvel = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsIntro(false);
-    }, 8000);
+    }, 6000);
   }, []);
 
   // subscription visibility
