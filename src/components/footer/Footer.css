@@ -31,10 +31,13 @@
   display: flex;
   justify-content: space-evenly;
 }
-.Footer .footer-links-container a {
+.Footer .footer-links-container a,
+.Footer .footer-links-container p {
   font-weight: 300;
   color: gray;
 }
-.Footer .footer-links-container a:hover {
+.Footer .footer-links-container a:hover,
+.Footer .footer-links-container p:hover {
   color: red;
+  cursor: pointer;
 }/*# sourceMappingURL=Footer.css.map */
