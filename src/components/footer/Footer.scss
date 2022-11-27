@@ -18,9 +18,14 @@
 
     .developer-name {
       font-family: 'Rubik Glitch', cursive;
-      font-size: 50px;
-      text-shadow: 2px 2px yellow;
-      color: red;
+      font-size: 30px;
+      text-shadow: 1px 1px white;
+      color: #2c2c2c;
+
+      &:hover {
+        text-shadow: 1px 1px yellow;
+        color: red;
+      }
     }
   }
 

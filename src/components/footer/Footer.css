@@ -17,8 +17,12 @@
 }
 .Footer .developer-container .developer-name {
   font-family: "Rubik Glitch", cursive;
-  font-size: 50px;
-  text-shadow: 2px 2px yellow;
+  font-size: 30px;
+  text-shadow: 1px 1px white;
+  color: #2c2c2c;
+}
+.Footer .developer-container .developer-name:hover {
+  text-shadow: 1px 1px yellow;
   color: red;
 }
 .Footer .footer-links-container {

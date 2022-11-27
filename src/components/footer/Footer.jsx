@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="developer-container">
         <p className="developer-title">developed by</p>
         <a href="http://www.linkedin.com/in/andrasrajkai">
-          <p className="developer-name">AR</p>
+          <p className="developer-name">A.R.</p>
         </a>
       </div>
       <div className="footer-links-container">
