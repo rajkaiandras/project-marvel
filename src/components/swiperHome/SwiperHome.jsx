@@ -24,18 +24,18 @@ import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.
 // databases
 const swiperSlideDB = [
   {
-    title: 'Title 1',
-    subtitle: 'Subtitle1',
+    title: 'Captain Marvel',
+    subtitle: 'Carol Danvers transformed into the cosmic powered hero',
     image: swiperSlideImage1,
   },
   {
-    title: 'Title 2',
-    subtitle: 'Subtitle2',
+    title: 'Avengers',
+    subtitle: 'Earths mightiest heroes fight together as a team',
     image: swiperSlideImage2,
   },
   {
-    title: 'Title 3',
-    subtitle: 'Subtitle3',
+    title: 'Storm',
+    subtitle: 'Fighting for peace and equal rights between mutants and humans',
     image: swiperSlideImage3,
   },
 ];
