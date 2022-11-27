@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // styles
 import './ArrowBtn.css';
@@ -7,16 +8,16 @@ export const ArrowBtn = () => {
   return (
     <div className="ArrowBtn">
       <div className="wrapper">
-        <a className="cta" href="#">
+        <Link className="cta" to="/characters">
           <span>SEE MORE</span>
           <span>
             <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1">
               <g
                 id="arrow"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <path
                   className="one"
@@ -36,7 +37,7 @@ export const ArrowBtn = () => {
               </g>
             </svg>
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );

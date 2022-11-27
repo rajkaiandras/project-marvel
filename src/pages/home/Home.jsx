@@ -12,9 +12,7 @@ export const Home = () => {
   return (
     <div className="Home">
       <SwiperHome />
-      <Link className="link-to-arrow-btn" to="/characters">
-        <ArrowBtn />
-      </Link>
+      <ArrowBtn />
     </div>
   );
 };
