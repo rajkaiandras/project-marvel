@@ -32,9 +32,11 @@ export const Marvel = () => {
   const { authIsReady, user } = useAuthContext();
 
   // intro unmounting
-  setTimeout(() => {
-    setIsIntro(false);
-  }, 8000);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsIntro(false);
+    }, 8000);
+  }, []);
 
   // subscription visibility
   useEffect(() => {
@@ -43,7 +45,7 @@ export const Marvel = () => {
         setSubscriptionVisibility(true);
       }
     }, 30000);
-  }, []);
+  }, [user]);
 
   const closeSubscription = () => {
     setSubscriptionVisibility(false);
