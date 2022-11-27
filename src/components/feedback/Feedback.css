@@ -1,33 +1,3 @@
-.Feedback {
-  -webkit-animation-name: feedback-visibility;
-          animation-name: feedback-visibility;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes feedback-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes feedback-visibility {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .Feedback .feedback-btn {
   background-color: transparent;
   border: none;
