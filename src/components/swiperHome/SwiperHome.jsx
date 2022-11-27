@@ -21,10 +21,23 @@ import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
 
-const swiperSlideImages = [
-  swiperSlideImage1,
-  swiperSlideImage2,
-  swiperSlideImage3,
+// databases
+const swiperSlideDB = [
+  {
+    title: 'Title 1',
+    subtitle: 'Subtitle1',
+    image: swiperSlideImage1,
+  },
+  {
+    title: 'Title 2',
+    subtitle: 'Subtitle2',
+    image: swiperSlideImage2,
+  },
+  {
+    title: 'Title 3',
+    subtitle: 'Subtitle3',
+    image: swiperSlideImage3,
+  },
 ];
 
 export const SwiperHome = () => {
@@ -39,19 +52,14 @@ export const SwiperHome = () => {
       slidesPerView={1}
       loop
     >
-      {swiperSlideImages.map((image, index) => {
+      {swiperSlideDB.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="slide-content">
-              <h1 className="slide-title">Heroes live among us</h1>
-              <h3 className="slide-subtitle">
-                Discover the power of comic books
-              </h3>
-              <Link className="link-to-arrow-btn" to="/characters">
-                <ArrowBtn />
-              </Link>
+              <h1 className="slide-title">{slide.title}</h1>
+              <h3 className="slide-subtitle">{slide.subtitle}</h3>
             </div>
-            <img className="slide-bg" src={image} alt="marvel heroes" />
+            <img className="slide-bg" src={slide.image} alt="marvel heroes" />
           </SwiperSlide>
         );
       })}

@@ -1,5 +1,9 @@
 .ArrowBtn {
   width: fit-content;
+  position: absolute;
+  left: 75px;
+  bottom: 50px;
+  z-index: 1;
 
   .wrapper {
     display: flex;
