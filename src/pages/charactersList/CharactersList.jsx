@@ -19,19 +19,14 @@ import { ScrollTop } from '../../components/scrollTop/ScrollTop';
 import './CharactersList.css';
 
 export const CharactersList = () => {
-  const [nameStartLetter, setNameStartLetter] = useState('a');
-  const [searchInput, setSearchInput] = useState('');
+  const [nameStartsWith, setNameStartsWith] = useState('a');
 
   // fetching characters
   const { apiCharactersEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
     marvelApiConfig;
-  // by search input
-  /* const { data, isPending, error } = useFetch(
-    `${apiCharactersEndpoint}?name=${searchInput}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
-  ); */
-  // by alphabetic letters
+
   const { data, isPending, error } = useFetch(
-    `${apiCharactersEndpoint}?nameStartsWith=${nameStartLetter}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
+    `${apiCharactersEndpoint}?nameStartsWith=${nameStartsWith}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
   return (
@@ -48,10 +43,15 @@ export const CharactersList = () => {
         <input
           className="search-input"
           type="text"
-          value={searchInput}
           placeholder="Search character by name..."
           onChange={(e) => {
-            setSearchInput(e.target.value);
+            if (e.target.value.length >= 3) {
+              setTimeout(() => {
+                setNameStartsWith(e.target.value);
+              }, 1000);
+            } else if (e.target.value.length === 0) {
+              setNameStartsWith('a');
+            }
           }}
         ></input>
       </label>
@@ -60,7 +60,7 @@ export const CharactersList = () => {
           <p
             key={index}
             className="letter"
-            onClick={() => setNameStartLetter(letter)}
+            onClick={() => setNameStartsWith(letter)}
           >
             {letter}
           </p>
