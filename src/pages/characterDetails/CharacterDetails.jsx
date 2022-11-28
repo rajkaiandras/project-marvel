@@ -32,6 +32,8 @@ export const CharacterDetails = () => {
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
+  if (data) console.log(data);
+
   // checking (is card favorite at actual user)
   useEffect(() => {
     if (user && documents) {
@@ -72,7 +74,7 @@ export const CharacterDetails = () => {
       {isPending && <LoadingMask />}
 
       {data && (
-        <div className="details-container">
+        <>
           <div className="image-wrapper">
             <img
               className="character-image"
@@ -91,6 +93,12 @@ export const CharacterDetails = () => {
               <hr />
             </div>
             <h3 className="character-name">{data.data.results[0].name}</h3>
+            <h4 className="comics-title">Comics, featuring this character</h4>
+            <ul className="comics-list">
+              {data.data.results[0].comics.items.map((comic) => {
+                return <li>{comic.name}</li>;
+              })}
+            </ul>
             {user && (
               <>
                 {isFavorite && (
@@ -102,7 +110,7 @@ export const CharacterDetails = () => {
               </>
             )}
           </div>
-        </div>
+        </>
       )}
     </div>
   );
