@@ -1,5 +1,7 @@
 import React from 'react';
 
+// assets
+
 // hooks
 import { useAuthContext } from '../../hooks/useAuthContext';
 
@@ -12,14 +14,15 @@ export const UserProfile = () => {
   return (
     <div className="UserProfile">
       <div className="profile-container">
-        <h1>Profile Details</h1>
-        <p>Display name:</p>
+        <h3 className="profile-title">Profile Details</h3>
+        <i class="fa-regular fa-user"></i>
+        <h4>Display name:</h4>
         <p>{user.displayName}</p>
-        <p>Email address:</p>
+        <h4>Email address:</h4>
         <p>{user.email}</p>
-        <p>Profile creation:</p>
+        <h4>Profile creation:</h4>
         <p>{user.metadata.creationTime}</p>
-        <p>Last sign in:</p>
+        <h4>Last sign in:</h4>
         <p>{user.metadata.lastSignInTime}</p>
       </div>
     </div>
