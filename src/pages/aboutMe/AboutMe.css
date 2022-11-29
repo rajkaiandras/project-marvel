@@ -1,9 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 .AboutMe {
-  font-size: 30px;
-  color: white;
   background-color: #2c2c2c;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+.AboutMe .profile-card {
+  width: 800px;
+  border-radius: 8px;
+  margin: 200px 0 50px;
+  background-color: #151515;
+  position: relative;
+}
+.AboutMe .profile-card .head-container {
+  width: 100%;
+  padding-top: 150px;
+  text-align: center;
+}
+.AboutMe .profile-card .head-container .profile-photo {
+  width: 240px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: absolute;
+  top: -120px;
+  left: calc(50% - 120px);
+  transition: all 500ms ease-in-out;
+}
+.AboutMe .profile-card .head-container .profile-photo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0.7);
+}
+.AboutMe .profile-card .head-container .profile-name {
+  font-size: 30px;
+  font-weight: 300;
+  color: red;
+  margin-bottom: 10px;
+}
+.AboutMe .profile-card .head-container .profession {
+  color: gray;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.AboutMe .profile-card .social-icons {
+  width: 100%;
+  text-align: center;
+}
+.AboutMe .profile-card .social-icons i {
+  font-size: 30px;
+  color: lightgrey;
+  margin: 20px 30px;
+}
+.AboutMe .profile-card .social-icons .fa-linkedin:hover {
+  color: blue;
+}
+.AboutMe .profile-card .social-icons .fa-envelope:hover {
+  color: white;
+}
+.AboutMe .profile-card hr {
+  width: 75%;
+  height: 2px;
+  border: none;
+  background-color: gray;
+}
+.AboutMe .profile-card .content {
+  width: 85%;
+  margin: 50px auto 30px;
+}
+.AboutMe .profile-card .content p {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  text-align: justify;
+  color: white;
+  margin-bottom: 20px;
+}
+.AboutMe .profile-card .content .highlighted-text {
+  color: red;
+  font-weight: 500;
+}
+.AboutMe .profile-card .signature {
+  font-family: "Ms Madi", cursive;
+  font-size: 40px;
+  color: white;
+  text-align: right;
+  margin: 0 100px 30px 0;
 }/*# sourceMappingURL=AboutMe.css.map */

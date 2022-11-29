@@ -1,7 +1,7 @@
 import React from 'react';
 
 // assets
-import profilePhoto from '../../assets/images/profile-photo.webp';
+import profilePhoto from '../../assets/profile-photo.webp';
 
 // styles
 import './AboutMe.css';
@@ -11,14 +11,18 @@ export const AboutMe = () => {
     <div className="AboutMe">
       <div className="profile-card">
         <div className="head-container">
-          <img src={profilePhoto} alt="profile" />
+          <img className="profile-photo" src={profilePhoto} alt="profile" />
           <h1 className="profile-name">András Rajkai</h1>
+          <h4 className="profession">Frontend Developer</h4>
         </div>
+        <div className="social-icons">
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <hr />
         <div className="content">
           <p>
-            I have always loved computer science. You know, I was the friend
-            next door who always reinstalled his friends operating system and
-            repaired their PC if something went wrong. I must have been thirteen
+            I have always loved computer science. I must have been thirteen
             years old, when I sorted the computer parts myself and built my
             first computer alone. My whole childehood was spent under the spell
             of computer science. Not only computer games intrested me, but also
@@ -49,13 +53,13 @@ export const AboutMe = () => {
             frontend development course at CodeCool. I just loved every moment
             of it.
           </p>
-          <p>
+          <p className="highlighted-text">
             I'm currently looking to contribute my skills to a team where I can
             prove my skills while growing in my capabilities. If you are looking
-            for a competent, highly-motivated developer, contact me. You can
-            reach me at rajkaiandras@gmail.com or here on LinkedIn."
+            for a competent, highly-motivated developer, contact me.
           </p>
         </div>
+        <p className="signature">András Rajkai</p>
       </div>
     </div>
   );

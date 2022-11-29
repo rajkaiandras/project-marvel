@@ -11,7 +11,7 @@ import 'swiper/css/effect-fade';
 // styles
 import './SwiperHome.css';
 
-// slide images
+// assets
 import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
