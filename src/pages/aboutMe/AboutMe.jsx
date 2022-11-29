@@ -16,8 +16,12 @@ export const AboutMe = () => {
           <h4 className="profession">Frontend Developer</h4>
         </div>
         <div className="social-icons">
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-solid fa-envelope"></i>
+          <a href="http://www.linkedin.com/in/andrasrajkai">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:rajkaiandras@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
         </div>
         <hr />
         <div className="content">
