@@ -1,6 +1,7 @@
 import React from 'react';
 
 // assets
+import profilePhoto from '../../assets/images/';
 
 // hooks
 import { useAuthContext } from '../../hooks/useAuthContext';
