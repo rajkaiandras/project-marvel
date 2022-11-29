@@ -92,23 +92,31 @@ export const CharacterDetails = () => {
               <h2 className="title">Character Details</h2>
               <hr />
             </div>
-            <h3 className="character-name">{data.data.results[0].name}</h3>
-            <h4 className="comics-title">Comics, featuring this character</h4>
+            <div className="character-name-container">
+              <h3 className="character-name">{data.data.results[0].name}</h3>
+              {user && (
+                <>
+                  {isFavorite && (
+                    <i
+                      onClick={setUnFavorite}
+                      className="fa-solid fa-heart"
+                    ></i>
+                  )}
+                  {!isFavorite && (
+                    <i
+                      onClick={setFavorite}
+                      className="fa-regular fa-heart"
+                    ></i>
+                  )}
+                </>
+              )}
+            </div>
+            <h4 className="comics-title">Comics featuring this character</h4>
             <ul className="comics-list">
               {data.data.results[0].comics.items.map((comic) => {
                 return <li>{comic.name}</li>;
               })}
             </ul>
-            {user && (
-              <>
-                {isFavorite && (
-                  <i onClick={setUnFavorite} className="fa-solid fa-heart"></i>
-                )}
-                {!isFavorite && (
-                  <i onClick={setFavorite} className="fa-regular fa-heart"></i>
-                )}
-              </>
-            )}
           </div>
         </>
       )}
