@@ -25,6 +25,7 @@ export const AboutMe = () => {
         </div>
         <hr />
         <div className="content">
+          <h2 className="content-title">My developer story</h2>
           <p>
             I have always loved computer science. I must have been thirteen
             years old, when I sorted the computer parts myself and built my

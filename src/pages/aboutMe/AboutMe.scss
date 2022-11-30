@@ -79,6 +79,14 @@
       width: 85%;
       margin: 50px auto 30px;
 
+      .content-title {
+        font-family: 'Ms Madi', cursive;
+        font-size: 30px;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 30px;
+      }
+
       p {
         font-size: 18px;
         font-weight: 300;
@@ -91,7 +99,6 @@
 
       .highlighted-text {
         color: red;
-        font-weight: 500;
       }
     }
 
@@ -100,7 +107,7 @@
       font-size: 40px;
       color: white;
       text-align: right;
-      margin: 0 100px 30px 0;
+      margin: 0 100px 50px 0;
     }
   }
 }

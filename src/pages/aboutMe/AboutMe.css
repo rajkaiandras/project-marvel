@@ -67,6 +67,13 @@
   width: 85%;
   margin: 50px auto 30px;
 }
+.AboutMe .profile-card .content .content-title {
+  font-family: "Ms Madi", cursive;
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 30px;
+}
 .AboutMe .profile-card .content p {
   font-size: 18px;
   font-weight: 300;
@@ -78,12 +85,11 @@
 }
 .AboutMe .profile-card .content .highlighted-text {
   color: red;
-  font-weight: 500;
 }
 .AboutMe .profile-card .signature {
   font-family: "Ms Madi", cursive;
   font-size: 40px;
   color: white;
   text-align: right;
-  margin: 0 100px 30px 0;
+  margin: 0 100px 50px 0;
 }/*# sourceMappingURL=AboutMe.css.map */
