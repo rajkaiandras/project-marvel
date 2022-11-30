@@ -1,28 +1,30 @@
 .ComicCard {
   width: 200px;
   height: 300px;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
   position: relative;
 }
 .ComicCard .comic-image-container {
   width: 100%;
   height: 100%;
-  transition: all 300ms ease-in-out;
-}
-.ComicCard .comic-image-container:hover {
-  transform: translateY(-10px);
 }
 .ComicCard .comic-image-container .comic-image {
   width: 100%;
   height: 100%;
+  box-shadow: 0 12px 10px -3px gray;
   transition: all 200ms ease-in-out;
 }
-.ComicCard .comic-title {
-  font-size: 16px;
-  font-weight: 700;
+.ComicCard .comic-image-container .comic-image:hover {
+  transform: translateY(-10px);
+}
+.ComicCard .comic-image-container .comic-title {
+  height: 42px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
   text-align: center;
   color: gray;
   position: absolute;
-  bottom: -50px;
+  bottom: -55px;
   left: 0;
 }/*# sourceMappingURL=ComicCard.css.map */
