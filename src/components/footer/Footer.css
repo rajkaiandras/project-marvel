@@ -17,7 +17,7 @@
 }
 .Footer .developer-container .developer-name {
   font-family: "Rubik Glitch", cursive;
-  font-size: 30px;
+  font-size: 40px;
   text-shadow: 1px 1px white;
   color: #2c2c2c;
 }
@@ -27,7 +27,7 @@
 }
 .Footer .footer-links-container {
   width: 320px;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   justify-content: space-evenly;
 }
