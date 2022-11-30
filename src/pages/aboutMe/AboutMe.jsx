@@ -1,7 +1,7 @@
 import React from 'react';
 
 // assets
-import profilePhoto from '../../assets/profile-photo.webp';
+import profilePhoto from '../../assets/images/profile-photo.webp';
 
 // styles
 import './AboutMe.css';

@@ -21,7 +21,6 @@ import { UserProfile } from './pages/userProfile/UserProfile';
 import { SignUp } from './pages/signUp/SignUp';
 import { LogIn } from './pages/logIn/LogIn';
 import { AboutMe } from './pages/aboutMe/AboutMe';
-import { Contacts } from './pages/contacts/Contacts';
 
 // styles
 import './Marvel.css';
@@ -38,13 +37,23 @@ export const Marvel = () => {
     }, 6000);
   }, []);
 
-  // subscription visibility
+  // timed subscription visibility
   useEffect(() => {
-    setTimeout(() => {
-      if (!user) {
+    const timedSubscription = () =>
+      setTimeout(() => {
         setSubscriptionVisibility(true);
-      }
-    }, 30000);
+      }, 15000);
+
+    const deleteTimedSubscription = () => {
+      setSubscriptionVisibility(false);
+      clearTimeout(timedSubscription);
+    };
+
+    if (!user) {
+      timedSubscription();
+    } else {
+      deleteTimedSubscription();
+    }
   }, [user]);
 
   const closeSubscription = () => {
@@ -79,7 +88,6 @@ export const Marvel = () => {
               element={!user ? <SignUp /> : <Navigate to="/userprofile" />}
             />
             <Route path="/aboutme" element={<AboutMe />} />
-            <Route path="/contacts" element={<Contacts />} />
           </Routes>
           <Footer />
           <Feedback />

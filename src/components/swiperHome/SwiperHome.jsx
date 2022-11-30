@@ -15,7 +15,7 @@ import './SwiperHome.css';
 import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
 import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
 import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
-import disneyLogo from '../../assets/svgs/disney-logo.svg';
+import disneyLogo from '../../assets/images/disney-logo.svg';
 
 // database
 const swiperSlideDB = [
