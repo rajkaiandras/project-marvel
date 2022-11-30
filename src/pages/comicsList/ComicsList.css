@@ -1,1 +1,44 @@
-/*# sourceMappingURL=ComicsList.css.map */
+.ComicsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  background-color: white;
+}
+.ComicsList .title-container {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  background-image: url("../../assets/images/comics-bg.webp");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ComicsList .title-container .title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.ComicsList .title-container .subtitle {
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+.ComicsList .comics-cards-container {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 1;
+}/*# sourceMappingURL=ComicsList.css.map */

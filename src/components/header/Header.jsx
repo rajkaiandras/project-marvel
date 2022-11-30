@@ -16,6 +16,7 @@ export const Header = () => {
     <header className="Header">
       <nav className="nav-bar">
         <Link to="/">Home</Link>
+        <Link to="/comics">Comics</Link>
         <Link to="/characters">Characters</Link>
 
         {!user && (
