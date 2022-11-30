@@ -12,9 +12,10 @@ import 'swiper/css/effect-fade';
 import './SwiperHome.css';
 
 // assets
-import swiperSlideImage1 from '../../assets/images/swiper/swiper-slide-bg-img-1.jpg';
-import swiperSlideImage2 from '../../assets/images/swiper/swiper-slide-bg-img-2.jpg';
-import swiperSlideImage3 from '../../assets/images/swiper/swiper-slide-bg-img-3.jpg';
+import swiperSlideImage1 from '../../assets/images/swiperHomeSlides/swiper-slide-bg-1.webp';
+import swiperSlideImage2 from '../../assets/images/swiperHomeSlides/swiper-slide-bg-2.webp';
+import swiperSlideImage3 from '../../assets/images/swiperHomeSlides/swiper-slide-bg-3.webp';
+
 import disneyLogo from '../../assets/images/disney-logo.svg';
 
 // database
