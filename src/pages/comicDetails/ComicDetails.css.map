@@ -1,1 +1,1 @@
-{"version":3,"sources":["ComicDetails.scss","ComicDetails.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;ACCF","file":"ComicDetails.css"}
+{"version":3,"sources":["ComicDetails.scss","ComicDetails.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,2BAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;ACCF;ADCE;EACE,WAAA;EACA,YAAA;EACA,gBAAA;ACCJ;ADCI;EACE,WAAA;EACA,YAAA;ACCN;ADGE;EACE,eAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;ACDJ","file":"ComicDetails.css"}
