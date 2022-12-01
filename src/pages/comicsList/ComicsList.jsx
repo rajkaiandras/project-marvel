@@ -50,7 +50,11 @@ export const ComicsList = () => {
                 !comic.thumbnail.path.includes('image_not_available')
             )
             .map((comic) => (
-              <ComicCard title={comic.title} imageUrl={comic.thumbnail.path} />
+              <ComicCard
+                key={comic.id}
+                title={comic.title}
+                imageUrl={comic.thumbnail.path}
+              />
             ))}
       </div>
     </div>
