@@ -1,6 +1,5 @@
 .FavoritesList {
-  font-size: 1.25rem;
-  font-weight: 300;
+  height: 100%;
   padding: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -8,5 +7,17 @@
   align-items: center;
   gap: 30px;
   flex-grow: 1;
-  background-color: #2c2c2c;
+  position: relative;
+  background-image: url("../../assets/images/comics-bg.webp");
+  background-position: cover;
+}
+.FavoritesList .backdrop-blur {
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }/*# sourceMappingURL=FavoritesList.css.map */
