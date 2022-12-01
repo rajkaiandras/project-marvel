@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// database
-import { alphabet } from '../../database/alphabet';
-
 // configs
 import { marvelApiConfig } from '../../configs/marvelApiConfig';
 
 // customHooks
 import { useFetch } from '../../hooks/useFetch';
+
+// constants
+import { alphabet } from '../../constants/alphabet';
 
 // components
 import { LoadingMask } from '../../components/loadingMask/LoadingMask';

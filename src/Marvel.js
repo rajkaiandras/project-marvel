@@ -15,6 +15,7 @@ import { Subscription } from './components/subscription/Subscription';
 // pages
 import { Home } from './pages/home/Home';
 import { ComicsList } from './pages/comicsList/ComicsList';
+import { ComicDetails } from './pages/comicDetails/ComicDetails';
 import { CharactersList } from './pages/charactersList/CharactersList';
 import { CharacterDetails } from './pages/characterDetails/CharacterDetails';
 import { FavoritesList } from './pages/favoritesList/FavoritesList';
@@ -71,6 +72,7 @@ export const Marvel = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/comics" element={<ComicsList />} />
+            <Route path="/comics/:id" element={<ComicDetails />} />
             <Route path="/characters" element={<CharactersList />} />
             <Route path="/characters/:id" element={<CharacterDetails />} />
             <Route

@@ -1,0 +1,9 @@
+.ComicDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #2c2c2c;
+  color: white;
+}/*# sourceMappingURL=ComicDetails.css.map */
