@@ -33,7 +33,7 @@
 .ComicDetails .content-container .comic-details {
   width: 600px;
   height: 450px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .ComicDetails .content-container .comic-details .comic-title {
   font-size: 25px;
@@ -54,6 +54,7 @@
   font-size: 18px;
   font-weight: 300;
   text-shadow: 1px 1px black;
+  margin-left: 10px;
 }
 .ComicDetails .content-container .comic-details .creator-list {
   display: grid;
@@ -68,10 +69,11 @@
   font-weight: 700;
   text-shadow: 1px 1px black;
   text-transform: capitalize;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .ComicDetails .content-container .comic-details .creator-list li p {
   font-size: 18px;
   font-weight: 300;
   text-shadow: 1px 1px black;
+  margin-left: 10px;
 }/*# sourceMappingURL=ComicDetails.css.map */

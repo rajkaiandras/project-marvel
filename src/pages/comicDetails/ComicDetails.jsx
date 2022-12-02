@@ -34,7 +34,7 @@ export const ComicDetails = () => {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center 30%',
       backgroundSize: 'cover',
-      filter: 'blur(8px)',
+      filter: 'blur(8px) brightness(0.5)',
     };
   }
 
@@ -66,9 +66,9 @@ export const ComicDetails = () => {
                 </p>
               </div>
               <ul className="creator-list">
-                {data.data.results[0].creators.items.map((creator) => {
+                {data.data.results[0].creators.items.map((creator, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <h3>{`${creator.role}:`}</h3>
                       <p>{creator.name}</p>
                     </li>
