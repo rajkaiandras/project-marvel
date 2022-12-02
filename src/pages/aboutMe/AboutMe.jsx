@@ -17,10 +17,10 @@ export const AboutMe = () => {
         </div>
         <div className="social-icons">
           <a href="http://www.linkedin.com/in/andrasrajkai">
-            <i class="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href="mailto:rajkaiandras@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope"></i>
           </a>
         </div>
         <hr />
