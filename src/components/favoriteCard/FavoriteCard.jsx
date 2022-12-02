@@ -30,7 +30,7 @@ export const FavoriteCard = ({ documentId, characterId }) => {
     characterImage.current.style.transform = 'scale(1)';
     horizontalRule.current.style.height = '4px';
     characterName.current.style.color = 'gray';
-    faAngleRight.current.style.color = 'gray';
+    faAngleRight.current.style.color = 'red';
   };
 
   const unfavoriteCharacter = () => {
