@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 // configs
 import { marvelApiConfig } from '../../configs/marvelApiConfig';
@@ -32,7 +32,8 @@ export const CharacterDetails = () => {
     `${apiCharacterDetailsEndpoint}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
-  if (data) console.log(data);
+  if (data)
+    console.log(data.data.results[0].comics.items[0].resourceURI.slice(-5));
 
   // checking (is card favorite at actual user)
   useEffect(() => {
@@ -114,7 +115,18 @@ export const CharacterDetails = () => {
             <h4 className="comics-title">Comics featuring this character</h4>
             <ul className="comics-list">
               {data.data.results[0].comics.items.map((comic) => {
-                return <li>{comic.name}</li>;
+                return (
+                  <Link
+                    key={`/comics/${comic.resourceURI.substring(
+                      comic.resourceURI.lastIndexOf('/') + 1
+                    )}`}
+                    to={`/comics/${comic.resourceURI.substring(
+                      comic.resourceURI.lastIndexOf('/') + 1
+                    )}`}
+                  >
+                    <li>{comic.name}</li>
+                  </Link>
+                );
               })}
             </ul>
           </div>

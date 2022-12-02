@@ -112,6 +112,9 @@
   margin: 10px 0 0 10px;
   color: gray;
 }
+.CharacterDetails .content .comics-list li:hover {
+  color: red;
+}
 .CharacterDetails .error {
   color: red;
 }/*# sourceMappingURL=CharacterDetails.css.map */
