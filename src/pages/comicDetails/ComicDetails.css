@@ -1,12 +1,12 @@
 .ComicDetails {
   width: 100%;
   height: calc(100vh - 200px);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  color: white;
   position: relative;
 }
 .ComicDetails .bg-image-wrapper {
@@ -18,10 +18,39 @@
   width: 100%;
   height: 100%;
 }
-.ComicDetails .comic-title {
-  font-size: 50px;
+.ComicDetails .content-container {
+  display: flex;
+  gap: 50px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, -50%);
+}
+.ComicDetails .content-container .comic-cover {
+  width: 300px;
+  height: 450px;
+}
+.ComicDetails .content-container .comic-details {
+  width: 600px;
+  height: 450px;
+  overflow-y: scroll;
+}
+.ComicDetails .content-container .comic-details .comic-title {
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 1px 1px black;
+  margin-bottom: 30px;
+}
+.ComicDetails .content-container .comic-details .creator-list li {
+  margin-bottom: 30px;
+}
+.ComicDetails .content-container .comic-details .creator-list li h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px black;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.ComicDetails .content-container .comic-details .creator-list li p {
+  font-size: 18px;
 }/*# sourceMappingURL=ComicDetails.css.map */

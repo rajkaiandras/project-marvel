@@ -23,13 +23,16 @@ export const ComicDetails = () => {
     `${apiComicsEndpoint}/${comicId.id}?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
 
+  if (data) console.log(data);
+
+  // stlying background image
   let bgImage = {};
 
   if (data) {
     bgImage = {
       backgroundImage: `url(${data.data.results[0].thumbnail.path}.${data.data.results[0].thumbnail.extension})`,
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
+      backgroundPosition: 'center 30%',
       backgroundSize: 'cover',
       filter: 'blur(8px)',
     };
@@ -48,7 +51,26 @@ export const ComicDetails = () => {
           <div className="bg-image-wrapper">
             <div style={bgImage} className="bg-image"></div>
           </div>
-          <h1 className="comic-title">{data.data.results[0].title}</h1>
+          <div className="content-container">
+            <img
+              className="comic-cover"
+              src={`${data.data.results[0].thumbnail.path}.${data.data.results[0].thumbnail.extension}`}
+              alt=""
+            />
+            <div className="comic-details">
+              <h1 className="comic-title">{data.data.results[0].title}</h1>
+              <ul className="creator-list">
+                {data.data.results[0].creators.items.map((creator) => {
+                  return (
+                    <li>
+                      <h3>{creator.role}</h3>
+                      <p>{creator.name}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </>
       )}
     </div>
