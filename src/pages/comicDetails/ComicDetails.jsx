@@ -59,11 +59,17 @@ export const ComicDetails = () => {
             />
             <div className="comic-details">
               <h1 className="comic-title">{data.data.results[0].title}</h1>
+              <div className="published-container">
+                <h3 className="published-title">Published:</h3>
+                <p className="published-date">
+                  {data.data.results[0].dates[0].date.slice(0, 10)}
+                </p>
+              </div>
               <ul className="creator-list">
                 {data.data.results[0].creators.items.map((creator) => {
                   return (
                     <li>
-                      <h3>{creator.role}</h3>
+                      <h3>{`${creator.role}:`}</h3>
                       <p>{creator.name}</p>
                     </li>
                   );

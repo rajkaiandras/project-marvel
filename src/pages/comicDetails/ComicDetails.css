@@ -37,12 +37,31 @@
 }
 .ComicDetails .content-container .comic-details .comic-title {
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 900;
   text-shadow: 1px 1px black;
   margin-bottom: 30px;
 }
-.ComicDetails .content-container .comic-details .creator-list li {
+.ComicDetails .content-container .comic-details .published-container {
   margin-bottom: 30px;
+}
+.ComicDetails .content-container .comic-details .published-container .published-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px black;
+  margin-bottom: 10px;
+}
+.ComicDetails .content-container .comic-details .published-container .published-date {
+  font-size: 18px;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
+}
+.ComicDetails .content-container .comic-details .creator-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.ComicDetails .content-container .comic-details .creator-list li {
+  margin-bottom: 20px;
 }
 .ComicDetails .content-container .comic-details .creator-list li h3 {
   font-size: 20px;
@@ -53,4 +72,6 @@
 }
 .ComicDetails .content-container .comic-details .creator-list li p {
   font-size: 18px;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
 }/*# sourceMappingURL=ComicDetails.css.map */

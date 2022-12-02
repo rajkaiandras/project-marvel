@@ -40,14 +40,35 @@
 
       .comic-title {
         font-size: 25px;
-        font-weight: 700;
+        font-weight: 900;
         text-shadow: 1px 1px black;
         margin-bottom: 30px;
       }
 
+      .published-container {
+        margin-bottom: 30px;
+
+        .published-title {
+          font-size: 20px;
+          font-weight: 700;
+          text-shadow: 1px 1px black;
+          margin-bottom: 10px;
+        }
+
+        .published-date {
+          font-size: 18px;
+          font-weight: 300;
+          text-shadow: 1px 1px black;
+        }
+      }
+
       .creator-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
         li {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
 
           h3 {
             font-size: 20px;
@@ -59,6 +80,8 @@
 
           p {
             font-size: 18px;
+            font-weight: 300;
+            text-shadow: 1px 1px black;
           }
         }
       }
