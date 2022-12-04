@@ -9,7 +9,7 @@
   flex-grow: 1;
   position: relative;
   background-image: url("../../assets/images/comics-bg.webp");
-  background-position: cover;
+  background-size: 200%;
 }
 .FavoritesList .backdrop-blur {
   width: 100%;
