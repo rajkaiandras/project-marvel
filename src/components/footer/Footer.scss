@@ -1,3 +1,6 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
 .Footer {
   height: 100px;
   border-top: 1px solid gray;
@@ -13,18 +16,18 @@
     .developer-title {
       font-size: 12px;
       font-weight: 300;
+      letter-spacing: 1.5px;
       color: gray;
+      margin-bottom: 5px;
     }
 
     .developer-name {
-      font-family: 'Rubik Glitch', cursive;
+      font-family: 'Ms Madi', cursive;
       font-size: 40px;
-      text-shadow: 1px 1px white;
-      color: #2c2c2c;
+      color: red;
 
       &:hover {
-        text-shadow: 1px 1px yellow;
-        color: red;
+        color: white;
       }
     }
   }
