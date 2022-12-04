@@ -5,6 +5,15 @@
   bottom: 50px;
   z-index: 1;
 
+  @media (max-width: 700px) {
+    transform: scale(0.7);
+    left: 30px;
+  }
+
+  @media (max-width: 500px) {
+    left: -10px;
+  }
+
   .wrapper {
     display: flex;
     justify-content: center;
@@ -21,6 +30,10 @@
       transition: 1s;
       box-shadow: 6px 6px 0 black;
       transform: skewX(-15deg);
+
+      @media (max-width: 700px) {
+        font-size: 30px;
+      }
     }
 
     .cta:focus {

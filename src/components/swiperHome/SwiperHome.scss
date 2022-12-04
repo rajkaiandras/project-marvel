@@ -14,12 +14,21 @@
 
   .slide-content {
     position: absolute;
-    top: 20%;
-    left: 100px;
+    padding: 0 40px;
+    top: 25%;
+    left: 60px;
+
+    @media (max-width: 1100px) {
+      top: 15%;
+    }
+
+    @media (max-width: 500px) {
+      left: 20px;
+    }
 
     .disney-logo {
       width: 100px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     .slide-title {
@@ -29,6 +38,10 @@
       text-shadow: 1px 1px black;
       text-transform: uppercase;
       margin-bottom: 30px;
+
+      @media (max-width: 700px) {
+        font-size: 40px;
+      }
     }
 
     .slide-subtitle {
@@ -36,6 +49,10 @@
       font-weight: 500;
       color: white;
       text-shadow: 1px 1px black;
+
+      @media (max-width: 700px) {
+        font-size: 25px;
+      }
     }
   }
 
