@@ -35,6 +35,9 @@
   height: 450px;
   overflow-y: auto;
 }
+.ComicDetails .content-container .comic-details::-webkit-scrollbar {
+  display: none;
+}
 .ComicDetails .content-container .comic-details .comic-title {
   font-size: 25px;
   font-weight: 900;
