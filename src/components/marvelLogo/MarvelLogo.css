@@ -18,6 +18,13 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
+@media (max-width: 900px) {
+  .MarvelLogo {
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
 @-webkit-keyframes logo-bg-animation {
   0% {
     background-color: transparent;
@@ -38,11 +45,6 @@
   }
   100% {
     background-color: red;
-  }
-}
-@media (max-width: 600px) {
-  .MarvelLogo {
-    transform: scaleY(100%);
   }
 }
 .MarvelLogo .logo-letter-m {

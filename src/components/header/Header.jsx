@@ -31,12 +31,14 @@ export const Header = () => {
             <Link className="favorites-btn" to={'/favorites'}>
               Favorites
             </Link>
-            <Link className="user-profile-btn" to={'/userprofile'}>
-              {user.displayName}
-            </Link>
-            <Link className="log-out-btn" to="#" onClick={logOut}>
-              Log Out
-            </Link>
+            <div className="user-btns">
+              <Link className="user-profile-btn" to={'/userprofile'}>
+                {user.displayName}
+              </Link>
+              <Link className="log-out-btn" to="#" onClick={logOut}>
+                Log Out
+              </Link>
+            </div>
           </>
         )}
       </nav>

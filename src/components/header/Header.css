@@ -7,10 +7,10 @@
   align-items: center;
   background-color: #151515;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .Header {
-    justify-content: space-evenly;
-    flex-direction: column;
+    min-height: 100px;
+    align-items: flex-end;
   }
 }
 .Header .nav-bar {
@@ -20,35 +20,60 @@
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 900px) {
   .Header .nav-bar {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .Header .nav-bar {
+    margin-top: 60px;
     flex-direction: column;
-    align-items: center;
   }
 }
 .Header .nav-bar a {
   margin-bottom: 5px;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 900;
   text-decoration: none;
   color: white;
 }
+@media (max-width: 700px) {
+  .Header .nav-bar a {
+    font-size: 14px;
+  }
+}
 .Header .nav-bar a:hover {
   color: red;
 }
-.Header .nav-bar .user-profile-btn {
-  font-size: 1rem;
+.Header .nav-bar .user-btns {
+  display: flex;
+  align-items: center;
+}
+.Header .nav-bar .user-btns .user-profile-btn {
+  font-size: 14px;
   margin-bottom: 5px;
   margin-left: 50px;
   color: gray;
 }
-.Header .nav-bar .log-out-btn {
+@media (max-width: 700px) {
+  .Header .nav-bar .user-btns .user-profile-btn {
+    margin-left: 0;
+  }
+}
+.Header .nav-bar .user-btns .log-out-btn {
   color: red;
   padding: 8px;
   border: 1px solid red;
   border-radius: 3px;
+  margin-left: 10px;
 }
-.Header .nav-bar .log-out-btn:hover {
+@media (max-width: 900px) {
+  .Header .nav-bar .user-btns .log-out-btn {
+    border: none;
+  }
+}
+.Header .nav-bar .user-btns .log-out-btn:hover {
   color: white;
   background-color: red;
 }/*# sourceMappingURL=Header.css.map */
