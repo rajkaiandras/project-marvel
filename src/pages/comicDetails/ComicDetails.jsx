@@ -25,7 +25,7 @@ export const ComicDetails = () => {
 
   if (data) console.log(data);
 
-  // stlying background image
+  // styling background image
   let bgImage = {};
 
   if (data) {
@@ -46,6 +46,7 @@ export const ComicDetails = () => {
       {/* loading mask */}
       {isPending && <LoadingMask />}
 
+      {/* display comic details */}
       {data && (
         <>
           <div className="bg-image-wrapper">

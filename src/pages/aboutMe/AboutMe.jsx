@@ -2,6 +2,7 @@ import React from 'react';
 
 // assets
 import profilePhoto from '../../assets/images/profile-photo.webp';
+import skillsLogo from '../../assets/images/skills.png';
 
 // styles
 import './AboutMe.css';
@@ -12,8 +13,14 @@ export const AboutMe = () => {
       <div className="profile-card">
         <div className="head-container">
           <img className="profile-photo" src={profilePhoto} alt="profile" />
-          <h1 className="profile-name">András Rajkai</h1>
+          <h1 className="profile-name">
+            <span className="initialize">A</span>ndrás{' '}
+            <span className="initialize">R</span>ajkai
+          </h1>
           <h4 className="profession">Frontend Developer</h4>
+          <h6 className="profession-detail">
+            Building excellent UI/UX with React
+          </h6>
         </div>
         <div className="social-icons">
           <a href="http://www.linkedin.com/in/andrasrajkai">
@@ -24,8 +31,42 @@ export const AboutMe = () => {
           </a>
         </div>
         <hr />
-        <div className="content">
-          <h2 className="content-title">My developer story</h2>
+        <div className="skills-container">
+          <h2 className="skills-title">My skills</h2>
+          <div className="skills-list">
+            <img className="skills-logo" src={skillsLogo} alt="skills logo" />
+            <div className="soft-skills">
+              <h3 className="soft-skills-title">Social competencies</h3>
+              <ul>
+                <li>High level of motivation</li>
+                <li>Strong attention to detail</li>
+                <li>Emotional intelligence</li>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Time management</li>
+              </ul>
+            </div>
+            <div className="hard-skills">
+              <h3 className="hard-skills-title">Technical skills</h3>
+              <ul>
+                <li>React.js</li>
+                <li>Javascript ES6</li>
+                <li>SASS</li>
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>Trello</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Agile Methodologies</li>
+                <li>English B2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="story-container">
+          <h2 className="story-title">The story behind me</h2>
+          <p>Hi, I'm András, a highly motivated frontend developer.</p>
           <p>
             I have always loved computer science. I must have been thirteen
             years old, when I sorted the computer parts myself and built my
