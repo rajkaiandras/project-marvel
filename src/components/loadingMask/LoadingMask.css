@@ -1,5 +1,6 @@
 .LoadingMask {
   position: relative;
+  z-index: 2;
 }
 .LoadingMask .loading-animation {
   width: 250px;

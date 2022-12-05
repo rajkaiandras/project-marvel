@@ -1,5 +1,6 @@
 .LoadingMask {
   position: relative;
+  z-index: 2;
 
   .loading-animation {
     width: calc(500px / 2);
@@ -19,6 +20,7 @@
     left: 50%;
     transform: translate(-50%, 0);
   }
+
   .loading-subtitle {
     width: 100%;
     font-size: 20px;

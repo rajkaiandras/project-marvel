@@ -23,6 +23,7 @@ export const FavoritesList = () => {
   return (
     <div className="FavoritesList">
       <div className="backdrop-blur"></div>
+
       {/* error display */}
       {error && <p>{error}</p>}
 
