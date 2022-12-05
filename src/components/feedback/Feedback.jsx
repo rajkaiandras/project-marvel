@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 // configs
-/* import { projectFirestore } from '../../configs/firebaseConfig'; */
+import { projectFirestore } from '../../configs/firebaseConfig';
 
 // styles
 import './Feedback.css';
@@ -41,14 +41,14 @@ export const Feedback = () => {
     const feedback = { email: feedbackEmail, message: feedbackMessage };
     console.log(feedback);
 
-    /* try {
+    try {
       await projectFirestore
         .collection('feedback')
         .doc(feedbackEmail)
         .set(feedback);
     } catch (err) {
       console.log(err);
-    } */
+    }
 
     setShowFeedbackModal(!showFeedbackModal);
     setFeedbackEmail('');

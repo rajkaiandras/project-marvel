@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 // configs
-/* import { projectFirestore } from '../../firebase/config'; */
+import { projectFirestore } from '../../configs/firebaseConfig';
 
 // styles
 import './Subscription.css';
@@ -31,11 +31,14 @@ export const Subscription = ({ closeSubscription }) => {
     };
     console.log(subscriber);
 
-    /* try {
-      await projectFirestore.collection('subscription').doc(fullName).set(subscriber);
+    try {
+      await projectFirestore
+        .collection('subscription')
+        .doc(fullName)
+        .set(subscriber);
     } catch (err) {
       console.log(err);
-    } */
+    }
 
     closeSubscription();
   };
