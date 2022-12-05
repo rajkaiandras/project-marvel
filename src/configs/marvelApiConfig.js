@@ -1,6 +1,6 @@
 export const marvelApiConfig = {
-  apiCharactersEndpoint: 'http://gateway.marvel.com/v1/public/characters',
-  apiComicsEndpoint: 'http://gateway.marvel.com/v1/public/comics',
+  apiCharactersEndpoint: 'https://gateway.marvel.com/v1/public/characters',
+  apiComicsEndpoint: 'https://gateway.marvel.com/v1/public/comics',
   /* apiCharacterDetailsEndpoint: `http://gateway.marvel.com/v1/public/characters/${id}`, */
   limit: '100',
   timeStamp: '1' /* Date.now() */,
