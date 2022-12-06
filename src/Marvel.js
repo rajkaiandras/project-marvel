@@ -67,10 +67,17 @@ export const Marvel = () => {
       {authIsReady && (
         <>
           <MarvelLogo />
-          {isIntro && <Intro />}
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  {isIntro && <Intro />}
+                  <Home />
+                </>
+              }
+            />
             <Route path="/comics" element={<ComicsList />} />
             <Route path="/comics/:id" element={<ComicDetails />} />
             <Route path="/characters" element={<CharactersList />} />
