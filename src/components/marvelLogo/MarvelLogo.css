@@ -58,6 +58,9 @@
   0% {
     opacity: 0;
   }
+  65% {
+    opacity: 0;
+  }
   70% {
     opacity: 1;
   }
@@ -67,6 +70,9 @@
 }
 @keyframes letter-m-animation {
   0% {
+    opacity: 0;
+  }
+  65% {
     opacity: 0;
   }
   70% {

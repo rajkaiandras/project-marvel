@@ -56,23 +56,23 @@
     }
 
     .title-container {
-      width: 700px;
+      width: 800px;
       height: 60px;
       position: relative;
       left: 75px;
       bottom: 0;
 
       .hero-title {
-        width: 700;
+        width: 800px;
         height: 60px;
-        font-size: 60px;
+        font-size: 4vw;
         font-weight: 700;
         text-transform: uppercase;
         color: white;
       }
 
       .hero-title-cover {
-        width: 700px;
+        width: 800px;
         height: 60px;
         background-color: #151515;
         position: absolute;
@@ -110,7 +110,7 @@
       .hero-subtitle {
         width: 700;
         height: 30px;
-        font-size: 30px;
+        font-size: 2vw;
         font-weight: 300;
         opacity: 1;
         color: white;
