@@ -44,19 +44,10 @@ export const Marvel = () => {
     const timedSubscription = () =>
       setTimeout(() => {
         setSubscriptionVisibility(true);
-      }, 15000);
+      }, 10000);
 
-    const deleteTimedSubscription = () => {
-      setSubscriptionVisibility(false);
-      clearTimeout(timedSubscription);
-    };
-
-    if (!user) {
-      timedSubscription();
-    } else {
-      deleteTimedSubscription();
-    }
-  }, [user]);
+    timedSubscription();
+  }, []);
 
   const closeSubscription = () => {
     setSubscriptionVisibility(false);
