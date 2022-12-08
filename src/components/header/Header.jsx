@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { useLogOut } from '../../hooks/useLogOut';
 import { useAuthContext } from '../../hooks/useAuthContext';
 
+// components
+import { MarvelLogo } from '../../components/marvelLogo/MarvelLogo';
+
 // styles
 import './Header.css';
 
@@ -14,6 +17,7 @@ export const Header = () => {
 
   return (
     <header className="Header">
+      <MarvelLogo />
       <nav className="nav-bar">
         <Link to="/">Home</Link>
         <Link to="/comics">Comics</Link>
@@ -31,14 +35,12 @@ export const Header = () => {
             <Link className="favorites-btn" to={'/favorites'}>
               Favorites
             </Link>
-            <div className="user-btns">
-              <Link className="user-profile-btn" to={'/userprofile'}>
-                {user.displayName}
-              </Link>
-              <Link className="log-out-btn" to="#" onClick={logOut}>
-                Log Out
-              </Link>
-            </div>
+            <Link className="user-profile-btn" to={'/userprofile'}>
+              {user.displayName}
+            </Link>
+            <Link className="log-out-btn" to="#" onClick={logOut}>
+              Log Out
+            </Link>
           </>
         )}
       </nav>

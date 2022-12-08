@@ -5,7 +5,6 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
 
 // components
-import { MarvelLogo } from './components/marvelLogo/MarvelLogo';
 import { Intro } from './components/intro/Intro';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
@@ -57,7 +56,6 @@ export const Marvel = () => {
     <div className="Marvel">
       {authIsReady && (
         <>
-          <MarvelLogo />
           <Header />
           <Routes>
             <Route
