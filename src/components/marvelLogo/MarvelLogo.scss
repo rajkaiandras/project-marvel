@@ -12,12 +12,6 @@
   animation-duration: 9s;
   animation-timing-function: ease-in-out;
 
-  @media (max-width: 900px) {
-    top: 5px;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
   @keyframes logo-bg-animation {
     0% {
       background-color: transparent;

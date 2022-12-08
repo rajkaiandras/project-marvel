@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // hooks
@@ -15,10 +15,26 @@ export const Header = () => {
   const { logOut } = useLogOut();
   const { user } = useAuthContext();
 
+  // toggle navigation bar
+  const [navBarVisibility, setNavBarVisibility] = useState(false);
+
+  const toggleNavBar = () => {
+    setNavBarVisibility(!navBarVisibility);
+  };
+
   return (
     <header className="Header">
       <MarvelLogo />
-      <nav className="nav-bar">
+
+      <button onClick={toggleNavBar} className="mobile-nav-toggle">
+        {navBarVisibility ? (
+          <i class="fa-solid fa-xmark"></i>
+        ) : (
+          <i class="fa-solid fa-bars"></i>
+        )}
+      </button>
+
+      <nav className={navBarVisibility ? 'nav-bar active' : 'nav-bar'}>
         <Link to="/">Home</Link>
         <Link to="/comics">Comics</Link>
         <Link to="/characters">Characters</Link>

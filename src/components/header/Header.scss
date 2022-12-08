@@ -5,11 +5,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   background-color: #151515;
 
-  @media (max-width: 900px) {
-    min-height: 100px;
-    align-items: flex-end;
+  .mobile-nav-toggle {
+    display: none;
+
+    @media (max-width: 992px) {
+      display: block;
+      width: fit-content;
+      font-size: 1.5rem;
+      border: none;
+      color: white;
+      background-color: transparent;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 9999;
+    }
   }
 
   .nav-bar {
@@ -19,13 +32,26 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 900px) {
-      max-width: 100%;
-    }
-
-    @media (max-width: 700px) {
-      margin-top: 60px;
+    @media (max-width: 992px) {
+      width: 70vw;
+      height: calc(100vh - 200px);
+      padding: 10vh 0 0 2rem;
+      border-left: 1px solid gray;
+      position: fixed;
+      inset: 100px 0 0 30vw;
+      z-index: 999;
       flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+      align-items: flex-start;
+      background-color: #151515;
+      backdrop-filter: blur(3px);
+      transform: translateX(70vw);
+      transition: transform 250ms ease-out;
+
+      &.active {
+        transform: translateX(0);
+      }
     }
 
     a {
@@ -33,10 +59,6 @@
       font-weight: 900;
       text-decoration: none;
       color: white;
-
-      @media (max-width: 700px) {
-        font-size: 14px;
-      }
 
       &:hover {
         color: red;
@@ -49,7 +71,7 @@
       margin-left: 50px;
       color: gray;
 
-      @media (max-width: 700px) {
+      @media (max-width: 992px) {
         margin-left: 0;
       }
     }
@@ -59,10 +81,6 @@
       padding: 8px;
       border: 1px solid red;
       border-radius: 3px;
-
-      @media (max-width: 900px) {
-        border: none;
-      }
 
       &:hover {
         color: white;
