@@ -22,7 +22,9 @@ export const SignUp = () => {
       <form onSubmit={handleSubmit} className="sign-up-form">
         <h2 className="sign-up-title">Sign Up</h2>
         <label>
-          <span>Display name</span>
+          <span>
+            <i class="fa-solid fa-user"></i>
+          </span>
           <input
             type="text"
             onChange={(e) => setDisplayName(e.target.value)}
@@ -31,7 +33,9 @@ export const SignUp = () => {
           />
         </label>
         <label>
-          <span>E-mail</span>
+          <span>
+            <i class="fa-solid fa-at"></i>
+          </span>
           <input
             type="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -40,7 +44,9 @@ export const SignUp = () => {
           />
         </label>
         <label>
-          <span>Password</span>
+          <span>
+            <i class="fa-solid fa-lock"></i>
+          </span>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}

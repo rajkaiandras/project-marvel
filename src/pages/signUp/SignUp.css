@@ -18,25 +18,39 @@
   color: white;
 }
 .SignUp .sign-up-form label {
-  display: flex;
-  flex-direction: column;
+  width: 300px;
+  height: 45px;
   margin-bottom: 1rem;
-  font-weight: 300;
+  display: flex;
   color: var(--font-clr);
 }
-.SignUp .sign-up-form input {
-  height: 2rem;
+.SignUp .sign-up-form label span {
+  display: inline-block;
+  width: 15%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border: 1px solid gray;
+  border-right: none;
+  background-color: #202020;
+  color: white;
+}
+.SignUp .sign-up-form label input {
+  width: 85%;
+  height: 45px;
   padding-left: 0.5rem;
   border: 1px solid gray;
   border-radius: 0;
   outline: none;
+  font-size: 1.1rem;
   color: var(--font-clr);
   background-color: #202020;
 }
 .SignUp .sign-up-form .sign-up-btn {
-  height: 1.5rem;
+  height: 1.75rem;
   border: none;
   font-family: Roboto, sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
