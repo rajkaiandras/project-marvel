@@ -8,10 +8,22 @@
   position: relative;
   background-color: #151515;
 }
+@media (max-width: 992px) {
+  .Header {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .Header .mobile-nav-toggle {
   display: none;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .Header .mobile-nav-toggle {
     display: block;
     width: -webkit-fit-content;
@@ -24,7 +36,7 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-    z-index: 9999;
+    z-index: 1;
   }
 }
 .Header .nav-bar {
@@ -34,14 +46,14 @@
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .Header .nav-bar {
     width: 70vw;
     height: calc(100vh - 200px);
     padding: 10vh 0 0 2rem;
     border-left: 1px solid gray;
     position: fixed;
-    inset: 100px 0 0 30vw;
+    inset: 100px 0 0 100vw;
     z-index: 999;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,11 +62,10 @@
     background-color: #151515;
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
-    transform: translateX(70vw);
     transition: transform 250ms ease-out;
   }
   .Header .nav-bar.active {
-    transform: translateX(0);
+    transform: translateX(-70vw);
   }
 }
 .Header .nav-bar a {
@@ -72,7 +83,7 @@
   margin-left: 50px;
   color: gray;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .Header .nav-bar .user-profile-btn {
     margin-left: 0;
   }

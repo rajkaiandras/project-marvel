@@ -13,6 +13,14 @@
   animation-duration: 9s;
   animation-timing-function: ease-in-out;
 
+  @media (max-width: 992px) {
+    transform: scale(100%);
+  }
+
+  @media (max-width: 768px) {
+    transform: scaleY(150%);
+  }
+
   @keyframes logo-bg-animation {
     0% {
       background-color: transparent;

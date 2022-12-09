@@ -16,6 +16,16 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
+@media (max-width: 992px) {
+  .MarvelLogo {
+    transform: scale(100%);
+  }
+}
+@media (max-width: 768px) {
+  .MarvelLogo {
+    transform: scaleY(150%);
+  }
+}
 @-webkit-keyframes logo-bg-animation {
   0% {
     background-color: transparent;
