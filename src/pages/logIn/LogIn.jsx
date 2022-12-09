@@ -21,7 +21,9 @@ export const LogIn = () => {
       <form onSubmit={handleSubmit} className="log-in-form">
         <h2 className="log-in-title">Log In</h2>
         <label>
-          <span>E-mail</span>
+          <span>
+            <i class="fa-solid fa-at"></i>
+          </span>
           <input
             type="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -30,7 +32,9 @@ export const LogIn = () => {
           />
         </label>
         <label>
-          <span>Password</span>
+          <span>
+            <i class="fa-solid fa-lock"></i>
+          </span>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
