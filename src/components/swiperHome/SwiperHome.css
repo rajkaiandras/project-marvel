@@ -34,7 +34,7 @@
   font-size: 60px;
   font-weight: 700;
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 3px 3px #151515;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -47,7 +47,7 @@
   font-size: 30px;
   font-weight: 500;
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 2px #151515;
 }
 @media (max-width: 700px) {
   .swiper .slide-content .slide-subtitle {
