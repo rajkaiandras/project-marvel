@@ -23,7 +23,9 @@
 
     @media (max-width: 768px) {
       display: block;
-      width: fit-content;
+      width: 3rem;
+      height: 2rem;
+      line-height: 2rem;
       font-size: 1.5rem;
       border: none;
       color: white;
@@ -31,7 +33,7 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
-      z-index: 1;
+      z-index: 4;
     }
   }
 
@@ -44,12 +46,12 @@
 
     @media (max-width: 768px) {
       width: 70vw;
-      height: calc(100vh - 200px);
-      padding: 10vh 0 0 2rem;
+      height: 100vh;
+      padding: 20vh 0 0 2rem;
       border-left: 1px solid gray;
       position: fixed;
-      inset: 100px 0 0 100vw;
-      z-index: 999;
+      inset: 0 0 0 100vw;
+      z-index: 3;
       flex-direction: column;
       justify-content: flex-start;
       gap: 2rem;
@@ -59,7 +61,11 @@
       transition: transform 250ms ease-out;
 
       &.active {
-        transform: translateX(-70vw);
+        transform: translateX(-35vw);
+
+        @media (max-width: 576px) {
+          transform: translate(-70vw);
+        }
       }
     }
 
