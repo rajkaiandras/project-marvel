@@ -29,7 +29,7 @@
     backdrop-filter: blur(3px);
 
     .feedback-modal-container {
-      background-color: #202020;
+      background-color: #121212;
       width: 100%;
       max-width: 400px;
       padding: 1rem;
@@ -68,12 +68,10 @@
         border: 1px solid gray;
         margin-bottom: 1rem;
         outline: none;
-        font-size: 1rem;
         color: gray;
 
         &::placeholder {
           font-family: Roboto, sans-serif;
-          font-size: 1rem;
           color: gray;
         }
       }
@@ -86,12 +84,10 @@
         border: 1px solid gray;
         outline: none;
         resize: none;
-        font-size: 1rem;
         color: gray;
 
         &::placeholder {
           font-family: Roboto, sans-serif;
-          font-size: 1rem;
           color: gray;
         }
       }

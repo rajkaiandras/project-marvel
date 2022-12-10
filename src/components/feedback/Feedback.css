@@ -26,7 +26,7 @@
           backdrop-filter: blur(3px);
 }
 .Feedback .feedback-backdrop .feedback-modal-container {
-  background-color: #202020;
+  background-color: #121212;
   width: 100%;
   max-width: 400px;
   padding: 1rem;
@@ -67,22 +67,18 @@
   border: 1px solid gray;
   margin-bottom: 1rem;
   outline: none;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input::-moz-placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input:-ms-input-placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input::placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input {
@@ -93,22 +89,18 @@
   border: 1px solid gray;
   outline: none;
   resize: none;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input::-moz-placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input:-ms-input-placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input::placeholder {
   font-family: Roboto, sans-serif;
-  font-size: 1rem;
   color: gray;
 }
 .Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container {
