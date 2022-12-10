@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // configs
 import { projectFirestore } from '../../configs/firebaseConfig';
@@ -59,6 +59,15 @@ export const Feedback = () => {
       setShowThankYou(false);
     }, 3000);
   };
+
+  // prevent body scrolling when feedback modal is opened
+  useEffect(() => {
+    if (showFeedbackModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [showFeedbackModal]);
 
   return (
     <div className="Feedback">
