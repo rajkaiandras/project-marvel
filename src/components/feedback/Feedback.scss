@@ -54,7 +54,7 @@
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
         color: red;
 
         @media (max-width: 768px) {
@@ -68,9 +68,12 @@
         border: 1px solid gray;
         margin-bottom: 1rem;
         outline: none;
+        font-size: 1rem;
         color: gray;
 
         &::placeholder {
+          font-family: Roboto, sans-serif;
+          font-size: 1rem;
           color: gray;
         }
       }
@@ -83,9 +86,12 @@
         border: 1px solid gray;
         outline: none;
         resize: none;
+        font-size: 1rem;
         color: gray;
 
         &::placeholder {
+          font-family: Roboto, sans-serif;
+          font-size: 1rem;
           color: gray;
         }
       }
