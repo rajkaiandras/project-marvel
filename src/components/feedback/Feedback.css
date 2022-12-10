@@ -15,7 +15,17 @@
 .Feedback .feedback-btn .feedback-logo:hover {
   color: black;
 }
-.Feedback .feedback-modal-container {
+.Feedback .feedback-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.Feedback .feedback-backdrop .feedback-modal-container {
   background-color: #202020;
   width: 100%;
   max-width: 400px;
@@ -27,18 +37,18 @@
   z-index: 997;
 }
 @media (max-width: 768px) {
-  .Feedback .feedback-modal-container {
+  .Feedback .feedback-backdrop .feedback-modal-container {
     max-width: 300px;
   }
 }
 @media (max-width: 576px) {
-  .Feedback .feedback-modal-container {
+  .Feedback .feedback-backdrop .feedback-modal-container {
     bottom: 50vh;
     right: 50vw;
     transform: translate(50%, 50%);
   }
 }
-.Feedback .feedback-modal-container .feedback-title {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-title {
   margin-bottom: 1rem;
   font-size: 20px;
   font-weight: 700;
@@ -47,11 +57,11 @@
   color: red;
 }
 @media (max-width: 768px) {
-  .Feedback .feedback-modal-container .feedback-title {
+  .Feedback .feedback-backdrop .feedback-modal-container .feedback-title {
     font-size: 16px;
   }
 }
-.Feedback .feedback-modal-container #feedback-email-input {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid gray;
@@ -59,16 +69,16 @@
   outline: none;
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-email-input::-moz-placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input::-moz-placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-email-input:-ms-input-placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input:-ms-input-placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-email-input::placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-email-input::placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-message-input {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input {
   width: 100%;
   height: 200px;
   padding: 0.5rem;
@@ -78,20 +88,20 @@
   resize: none;
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-message-input::-moz-placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input::-moz-placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-message-input:-ms-input-placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input:-ms-input-placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container #feedback-message-input::placeholder {
+.Feedback .feedback-backdrop .feedback-modal-container #feedback-message-input::placeholder {
   color: gray;
 }
-.Feedback .feedback-modal-container .feedback-btns-container {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container {
   display: flex;
   justify-content: flex-end;
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn {
   padding: 0.5rem 2rem;
   border: none;
   color: white;
@@ -100,22 +110,22 @@
   cursor: pointer;
   text-transform: uppercase;
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn:focus {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn:focus {
   transform: scale(0.975);
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn-send {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn-send {
   color: white;
   background-color: red;
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn-send:disabled {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn-send:disabled {
   background-color: tomato;
   cursor: not-allowed;
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn-cancel {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn-cancel {
   color: red;
   background-color: transparent;
 }
-.Feedback .feedback-modal-container .feedback-btns-container .btn-cancel:hover {
+.Feedback .feedback-backdrop .feedback-modal-container .feedback-btns-container .btn-cancel:hover {
   color: gray;
 }
 .Feedback .thank-you-message {

@@ -44,7 +44,9 @@ export const Header = () => {
       </button>
 
       <nav className={navBarVisibility ? 'nav-bar active' : 'nav-bar'}>
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <i class="fa-solid fa-house-chimney"></i>
+        </Link>
         <Link to="/comics">Comics</Link>
         <Link to="/characters">Characters</Link>
 

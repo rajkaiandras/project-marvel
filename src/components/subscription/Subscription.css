@@ -1,4 +1,4 @@
-.subscription-backdrop {
+.Subscription .subscription-backdrop {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -8,7 +8,7 @@
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
 }
-.subscription-backdrop .subscription-content {
+.Subscription .subscription-backdrop .subscription-content {
   display: flex;
   border: 2px solid gray;
   position: fixed;
@@ -17,19 +17,19 @@
   z-index: 999;
 }
 @media (max-width: 768px) {
-  .subscription-backdrop .subscription-content {
+  .Subscription .subscription-backdrop .subscription-content {
     flex-direction: column-reverse;
     top: calc(50vh - 300px);
     left: calc(50vw - 150px);
   }
 }
-.subscription-backdrop .subscription-content .left-side {
+.Subscription .subscription-backdrop .subscription-content .left-side {
   width: 300px;
   height: 300px;
   background-image: url("../../assets/images/marvel-heroes.webp");
   background-size: cover;
 }
-.subscription-backdrop .subscription-content .right-side {
+.Subscription .subscription-backdrop .subscription-content .right-side {
   width: 300px;
   height: 300px;
   padding: 1rem;
@@ -39,7 +39,7 @@
   position: relative;
   background-color: #202020;
 }
-.subscription-backdrop .subscription-content .right-side .close {
+.Subscription .subscription-backdrop .subscription-content .right-side .close {
   width: 30px;
   height: 30px;
   display: flex;
@@ -52,29 +52,29 @@
   color: gray;
   cursor: pointer;
 }
-.subscription-backdrop .subscription-content .right-side .close:hover {
+.Subscription .subscription-backdrop .subscription-content .right-side .close:hover {
   color: red;
 }
-.subscription-backdrop .subscription-content .right-side h3 {
+.Subscription .subscription-backdrop .subscription-content .right-side h3 {
   margin-bottom: 2rem;
   font-size: 16px;
   text-align: center;
   line-height: 1.5;
   color: lightgray;
 }
-.subscription-backdrop .subscription-content .right-side form {
+.Subscription .subscription-backdrop .subscription-content .right-side form {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-.subscription-backdrop .subscription-content .right-side form input {
+.Subscription .subscription-backdrop .subscription-content .right-side form input {
   height: 2rem;
   padding-left: 0.5rem;
   border: 1px solid gray;
   outline: none;
   color: gray;
 }
-.subscription-backdrop .subscription-content .right-side button {
+.Subscription .subscription-backdrop .subscription-content .right-side button {
   height: 1.5rem;
   border: none;
   color: white;
@@ -83,10 +83,10 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-.subscription-backdrop .subscription-content .right-side button:focus {
+.Subscription .subscription-backdrop .subscription-content .right-side button:focus {
   transform: scale(0.975);
 }
-.subscription-backdrop .subscription-content .right-side button:disabled {
+.Subscription .subscription-backdrop .subscription-content .right-side button:disabled {
   cursor: not-allowed;
   background-color: tomato;
 }/*# sourceMappingURL=Subscription.css.map */

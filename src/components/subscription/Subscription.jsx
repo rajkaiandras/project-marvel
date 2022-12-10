@@ -44,35 +44,37 @@ export const Subscription = ({ closeSubscription }) => {
   };
 
   return (
-    <div className="subscription-backdrop">
-      <div className="subscription-content">
-        <div className="left-side"></div>
-        <div className="right-side">
-          <div className="close" onClick={closeSubscription}>
-            <i className="fa-regular fa-circle-xmark"></i>
+    <div className="Subscription">
+      <div className="subscription-backdrop">
+        <div className="subscription-content">
+          <div className="left-side"></div>
+          <div className="right-side">
+            <div className="close" onClick={closeSubscription}>
+              <i className="fa-regular fa-circle-xmark"></i>
+            </div>
+            <h3>
+              Subscribe to our newsletters to get the news about Marvel heroes
+            </h3>
+            <form>
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                placeholder="Your full name"
+                onChange={fullNameInputHandler}
+              />
+              <input
+                type="text"
+                name="emailAddress"
+                id="emailAddress"
+                placeholder="Your e-mail address"
+                onChange={emailAddressInputHandler}
+              />
+              <button disabled={isDisabled} onClick={toSubscribe}>
+                Subscribe
+              </button>
+            </form>
           </div>
-          <h3>
-            Subscribe to our newsletters to get the news about Marvel heroes
-          </h3>
-          <form>
-            <input
-              type="text"
-              name="fullName"
-              id="fullName"
-              placeholder="Your full name"
-              onChange={fullNameInputHandler}
-            />
-            <input
-              type="text"
-              name="emailAddress"
-              id="emailAddress"
-              placeholder="Your e-mail address"
-              onChange={emailAddressInputHandler}
-            />
-            <button disabled={isDisabled} onClick={toSubscribe}>
-              Subscribe
-            </button>
-          </form>
         </div>
       </div>
     </div>

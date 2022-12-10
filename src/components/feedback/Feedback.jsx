@@ -76,36 +76,38 @@ export const Feedback = () => {
       </button>
 
       {showFeedbackModal && (
-        <section className="feedback-modal-container">
-          <h3 className="feedback-title">Feedback</h3>
-          <form>
-            <input
-              type="text"
-              name="feedback-email-input"
-              id="feedback-email-input"
-              placeholder="Your email address..."
-              onChange={saveFeedbackEmail}
-            />
-            <textarea
-              name="feedback-message-input"
-              id="feedback-message-input"
-              placeholder="Your feedback message..."
-              onChange={saveFeedbackMessage}
-            ></textarea>
-            <div className="feedback-btns-container">
-              <button
-                disabled={isDisabled}
-                className="btn btn-send"
-                onClick={sendFeedback}
-              >
-                Send
-              </button>
-              <button className="btn btn-cancel" onClick={togglePopUp}>
-                Cancel
-              </button>
-            </div>
-          </form>
-        </section>
+        <div className="feedback-backdrop">
+          <section className="feedback-modal-container">
+            <h3 className="feedback-title">Feedback</h3>
+            <form>
+              <input
+                type="text"
+                name="feedback-email-input"
+                id="feedback-email-input"
+                placeholder="Your email address..."
+                onChange={saveFeedbackEmail}
+              />
+              <textarea
+                name="feedback-message-input"
+                id="feedback-message-input"
+                placeholder="Your feedback message..."
+                onChange={saveFeedbackMessage}
+              ></textarea>
+              <div className="feedback-btns-container">
+                <button
+                  disabled={isDisabled}
+                  className="btn btn-send"
+                  onClick={sendFeedback}
+                >
+                  Send
+                </button>
+                <button className="btn btn-cancel" onClick={togglePopUp}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
       )}
 
       {showThankYou && <p className="thank-you-message">Thank You</p>}
