@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // hooks
@@ -12,8 +12,8 @@ import { MarvelLogo } from '../../components/marvelLogo/MarvelLogo';
 import './Header.css';
 
 export const Header = () => {
-  const { logOut } = useLogOut();
   const { user } = useAuthContext();
+  const { logOut } = useLogOut();
 
   // toggle navigation bar
   const [navBarVisibility, setNavBarVisibility] = useState(false);
@@ -21,6 +21,15 @@ export const Header = () => {
   const toggleNavBar = () => {
     setNavBarVisibility(!navBarVisibility);
   };
+
+  // prevent body scrolling when navigation bar is opened
+  useEffect(() => {
+    if (navBarVisibility) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [navBarVisibility]);
 
   return (
     <header className="Header">
