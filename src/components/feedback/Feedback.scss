@@ -21,7 +21,8 @@
 
   .feedback-modal-container {
     background-color: #202020;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 1rem;
     border: 2px solid gray;
     position: fixed;
@@ -29,14 +30,14 @@
     right: 40px;
     z-index: 997;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
+      max-width: 300px;
+    }
+
+    @media (max-width: 576px) {
       bottom: 50vh;
       right: 50vw;
       transform: translate(50%, 50%);
-    }
-
-    @media (max-width: 500px) {
-      width: 300px;
     }
 
     .feedback-title {
@@ -47,7 +48,7 @@
       text-align: center;
       color: red;
 
-      @media (max-width: 700px) {
+      @media (max-width: 768px) {
         font-size: 16px;
       }
     }
