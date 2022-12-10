@@ -19,7 +19,7 @@ import { ScrollTop } from '../../components/scrollTop/ScrollTop';
 import './ComicsList.css';
 
 export const ComicsList = () => {
-  const [titleStartsWith, setTitleStartsWith] = useState('a');
+  const [titleStartsWith, setTitleStartsWith] = useState('o');
 
   // fetching comics
   const { apiComicsEndpoint, limit, timeStamp, publicApiKey, md5Hash } =
@@ -28,8 +28,6 @@ export const ComicsList = () => {
   const { data, isPending, error } = useFetch(
     `${apiComicsEndpoint}?titleStartsWith=${titleStartsWith}&limit=${limit}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5Hash}`
   );
-
-  if (data) console.log(data);
 
   return (
     <div className="ComicsList">

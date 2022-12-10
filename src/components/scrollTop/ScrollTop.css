@@ -5,7 +5,7 @@
   position: fixed;
   bottom: 20px;
   right: 80px;
-  z-index: 999;
+  z-index: 1;
   cursor: pointer;
 }
 .ScrollTop .scroll-top-logo {
