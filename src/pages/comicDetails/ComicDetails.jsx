@@ -52,6 +52,7 @@ export const ComicDetails = () => {
           <div className="bg-image-wrapper">
             <div style={bgImage} className="bg-image"></div>
           </div>
+
           <div className="content-container">
             <img
               className="comic-cover"

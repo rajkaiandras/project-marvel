@@ -1,6 +1,6 @@
 .ComicDetails {
   width: 100%;
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   color: white;
   display: flex;
   flex-direction: column;
@@ -13,33 +13,67 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .ComicDetails .bg-image-wrapper .bg-image {
   width: 100%;
   height: 100%;
 }
 .ComicDetails .content-container {
+  width: 100%;
+  max-width: 70vw;
+  padding: 1rem;
   display: flex;
   gap: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-60%, -50%);
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1200px) {
+  .ComicDetails .content-container {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 768px) {
+  .ComicDetails .content-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+  }
+}
+@media (max-width: 576px) {
+  .ComicDetails .content-container {
+    max-width: 90vw;
+  }
 }
 .ComicDetails .content-container .comic-cover {
-  width: 300px;
-  height: 450px;
+  width: 280px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 450px;
 }
 .ComicDetails .content-container .comic-details {
-  width: 600px;
-  height: 450px;
+  width: 65%;
   overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .ComicDetails .content-container .comic-details {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .ComicDetails .content-container .comic-details {
+    width: 90%;
+  }
 }
 .ComicDetails .content-container .comic-details::-webkit-scrollbar {
   display: none;
 }
 .ComicDetails .content-container .comic-details .comic-title {
-  font-size: 25px;
+  font-size: clamp(1rem, 2.5vw, 4rem);
   font-weight: 900;
   text-shadow: 1px 1px black;
   margin-bottom: 30px;
@@ -48,13 +82,13 @@
   margin-bottom: 30px;
 }
 .ComicDetails .content-container .comic-details .published-container .published-title {
-  font-size: 20px;
+  font-size: clamp(1rem, 1.5vw, 3rem);
   font-weight: 700;
   text-shadow: 1px 1px black;
   margin-bottom: 10px;
 }
 .ComicDetails .content-container .comic-details .published-container .published-date {
-  font-size: 18px;
+  font-size: clamp(0.8rem, 1vw, 2rem);
   font-weight: 300;
   text-shadow: 1px 1px black;
   margin-left: 10px;
@@ -68,14 +102,14 @@
   margin-bottom: 20px;
 }
 .ComicDetails .content-container .comic-details .creator-list li h3 {
-  font-size: 20px;
+  font-size: clamp(1rem, 1.5vw, 3rem);
   font-weight: 700;
   text-shadow: 1px 1px black;
   text-transform: capitalize;
   margin-bottom: 5px;
 }
 .ComicDetails .content-container .comic-details .creator-list li p {
-  font-size: 18px;
+  font-size: clamp(0.8rem, 1vw, 2rem);
   font-weight: 300;
   text-shadow: 1px 1px black;
   margin-left: 10px;
