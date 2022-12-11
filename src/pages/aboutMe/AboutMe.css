@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 .AboutMe {
-  background-color: white;
+  background-color: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
 .AboutMe .profile-card {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 8px;
   margin: 200px 0 50px;
-  background-color: #151515;
+  background-color: #121212;
   position: relative;
 }
 .AboutMe .profile-card .head-container {
@@ -33,7 +34,7 @@
   filter: grayscale(0.7);
 }
 .AboutMe .profile-card .head-container .profile-name {
-  font-size: 30px;
+  font-size: clamp(1.2rem, 2vw, 3rem);
   font-weight: 300;
   letter-spacing: 3px;
   color: gray;
@@ -47,11 +48,16 @@
 }
 .AboutMe .profile-card .head-container .profession {
   color: gray;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 15px;
   margin-bottom: 10px;
+}
+@media (max-width: 576px) {
+  .AboutMe .profile-card .head-container .profession {
+    letter-spacing: 6px;
+  }
 }
 .AboutMe .profile-card .head-container .profession-detail {
   color: white;
@@ -93,6 +99,12 @@
 .AboutMe .profile-card .skills-container .skills-list {
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 576px) {
+  .AboutMe .profile-card .skills-container .skills-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 .AboutMe .profile-card .skills-container .skills-list .skill .skill-title {
   text-transform: uppercase;
