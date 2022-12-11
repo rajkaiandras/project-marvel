@@ -109,14 +109,8 @@
         display: flex;
         justify-content: space-evenly;
 
-        .skills-logo {
-          width: 120px;
-          align-self: center;
-          filter: grayscale(0.5);
-        }
-
-        .soft-skills {
-          .soft-skills-title {
+        .skill {
+          .skill-title {
             text-transform: uppercase;
             font-weight: 300;
             letter-spacing: 2px;
@@ -130,30 +124,6 @@
               margin: 0 0 5px 10px;
               font-weight: 300;
               letter-spacing: 2px;
-
-              &::before {
-                content: ' - ';
-              }
-            }
-          }
-        }
-
-        .hard-skills {
-          .hard-skills-title {
-            text-transform: uppercase;
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: red;
-            margin-bottom: 10px;
-          }
-
-          ul {
-            li {
-              color: white;
-              margin-left: 10px;
-              margin: 0 0 5px 10px;
-              letter-spacing: 2px;
-              font-weight: 300;
 
               &::before {
                 content: ' - ';

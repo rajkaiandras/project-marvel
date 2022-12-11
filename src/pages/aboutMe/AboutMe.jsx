@@ -2,7 +2,6 @@ import React from 'react';
 
 // assets
 import profilePhoto from '../../assets/images/profile-photo.webp';
-import skillsLogo from '../../assets/images/skills.png';
 
 // styles
 import './AboutMe.css';
@@ -34,9 +33,8 @@ export const AboutMe = () => {
         <div className="skills-container">
           <h2 className="skills-title">My skills</h2>
           <div className="skills-list">
-            <img className="skills-logo" src={skillsLogo} alt="skills logo" />
-            <div className="soft-skills">
-              <h3 className="soft-skills-title">Social competencies</h3>
+            <div className="skill">
+              <h3 className="skill-title">Social competencies</h3>
               <ul>
                 <li>High level of motivation</li>
                 <li>Strong attention to detail</li>
@@ -46,8 +44,8 @@ export const AboutMe = () => {
                 <li>Time management</li>
               </ul>
             </div>
-            <div className="hard-skills">
-              <h3 className="hard-skills-title">Technical skills</h3>
+            <div className="skill">
+              <h3 className="skill-title">Technical skills</h3>
               <ul>
                 <li>React.js</li>
                 <li>Javascript ES6</li>

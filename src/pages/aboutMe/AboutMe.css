@@ -94,42 +94,20 @@
   display: flex;
   justify-content: space-evenly;
 }
-.AboutMe .profile-card .skills-container .skills-list .skills-logo {
-  width: 120px;
-  align-self: center;
-  filter: grayscale(0.5);
-}
-.AboutMe .profile-card .skills-container .skills-list .soft-skills .soft-skills-title {
+.AboutMe .profile-card .skills-container .skills-list .skill .skill-title {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 2px;
   color: red;
   margin-bottom: 10px;
 }
-.AboutMe .profile-card .skills-container .skills-list .soft-skills ul li {
+.AboutMe .profile-card .skills-container .skills-list .skill ul li {
   color: white;
   margin: 0 0 5px 10px;
   font-weight: 300;
   letter-spacing: 2px;
 }
-.AboutMe .profile-card .skills-container .skills-list .soft-skills ul li::before {
-  content: " - ";
-}
-.AboutMe .profile-card .skills-container .skills-list .hard-skills .hard-skills-title {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: red;
-  margin-bottom: 10px;
-}
-.AboutMe .profile-card .skills-container .skills-list .hard-skills ul li {
-  color: white;
-  margin-left: 10px;
-  margin: 0 0 5px 10px;
-  letter-spacing: 2px;
-  font-weight: 300;
-}
-.AboutMe .profile-card .skills-container .skills-list .hard-skills ul li::before {
+.AboutMe .profile-card .skills-container .skills-list .skill ul li::before {
   content: " - ";
 }
 .AboutMe .profile-card .story-container {
