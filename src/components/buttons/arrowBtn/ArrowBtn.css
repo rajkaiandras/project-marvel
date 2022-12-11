@@ -3,27 +3,32 @@
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  left: 75px;
-  bottom: 50px;
+  top: 55vh;
+  left: 5vw;
   z-index: 1;
+  transform: scale(0.6);
 }
-@media (max-width: 700px) {
+@media (max-width: 992px) {
   .ArrowBtn {
-    transform: scale(0.7);
-    left: 30px;
+    top: 50vh;
+    left: 2.5vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .ArrowBtn {
-    left: -10px;
+    transform: scale(0.5);
+    left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .ArrowBtn {
+    transform: scale(0.4);
+    left: -5vw;
   }
 }
 .ArrowBtn .wrapper {
   display: flex;
   justify-content: center;
-  transform: scale(0.7);
-  /**************SVG****************/
-  /* SVG animations */
 }
 .ArrowBtn .wrapper .cta {
   display: flex;
@@ -36,11 +41,6 @@
   transition: 1s;
   box-shadow: 6px 6px 0 black;
   transform: skewX(-15deg);
-}
-@media (max-width: 700px) {
-  .ArrowBtn .wrapper .cta {
-    font-size: 30px;
-  }
 }
 .ArrowBtn .wrapper .cta:focus {
   outline: none;

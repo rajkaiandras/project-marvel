@@ -37,16 +37,14 @@ export const Header = () => {
 
       <button onClick={toggleNavBar} className="mobile-nav-toggle">
         {navBarVisibility ? (
-          <i class="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
         ) : (
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         )}
       </button>
 
       <nav className={navBarVisibility ? 'nav-bar active' : 'nav-bar'}>
-        <Link to="/">
-          <i class="fa-solid fa-house-chimney"></i>
-        </Link>
+        <Link to="/">Home</Link>
         <Link to="/comics">Comics</Link>
         <Link to="/characters">Characters</Link>
 

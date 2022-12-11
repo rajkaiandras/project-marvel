@@ -1,23 +1,29 @@
 .ArrowBtn {
   width: fit-content;
   position: absolute;
-  left: 75px;
-  bottom: 50px;
+  top: 55vh;
+  left: 5vw;
   z-index: 1;
+  transform: scale(0.6);
 
-  @media (max-width: 700px) {
-    transform: scale(0.7);
-    left: 30px;
+  @media (max-width: 992px) {
+    top: 50vh;
+    left: 2.5vw;
   }
 
-  @media (max-width: 500px) {
-    left: -10px;
+  @media (max-width: 768px) {
+    transform: scale(0.5);
+    left: 0;
+  }
+
+  @media (max-width: 576px) {
+    transform: scale(0.4);
+    left: -5vw;
   }
 
   .wrapper {
     display: flex;
     justify-content: center;
-    transform: scale(0.7);
 
     .cta {
       display: flex;
@@ -30,10 +36,6 @@
       transition: 1s;
       box-shadow: 6px 6px 0 black;
       transform: skewX(-15deg);
-
-      @media (max-width: 700px) {
-        font-size: 30px;
-      }
     }
 
     .cta:focus {
@@ -66,7 +68,7 @@
       top: 12%;
     }
 
-    /**************SVG****************/
+    // svg
 
     path.one {
       transition: 0.4s;
@@ -92,7 +94,7 @@
       animation: color_anim 1s infinite 0.4s;
     }
 
-    /* SVG animations */
+    // svg animations
 
     @keyframes color_anim {
       0% {

@@ -12,47 +12,28 @@
 }
 .swiper .slide-content {
   position: absolute;
-  padding: 0 40px;
-  top: 25%;
-  left: 60px;
-}
-@media (max-width: 1100px) {
-  .swiper .slide-content {
-    top: 15%;
-  }
-}
-@media (max-width: 500px) {
-  .swiper .slide-content {
-    left: 20px;
-  }
+  padding: 0 3rem;
+  top: 20vh;
+  left: 5vw;
 }
 .swiper .slide-content .disney-logo {
-  width: 100px;
-  margin-bottom: 10px;
+  width: 7vw;
+  min-width: 3rem;
+  margin-bottom: 1rem;
 }
 .swiper .slide-content .slide-title {
-  font-size: 60px;
+  font-size: clamp(2rem, 4vw, 6rem);
   font-weight: 700;
   color: white;
-  text-shadow: 3px 3px #151515;
+  text-shadow: 2px 2px #151515;
   text-transform: uppercase;
-  margin-bottom: 30px;
-}
-@media (max-width: 700px) {
-  .swiper .slide-content .slide-title {
-    font-size: 40px;
-  }
+  margin-bottom: 2rem;
 }
 .swiper .slide-content .slide-subtitle {
-  font-size: 30px;
+  font-size: clamp(1rem, 2vw, 3rem);
   font-weight: 500;
   color: white;
   text-shadow: 2px 2px #151515;
-}
-@media (max-width: 700px) {
-  .swiper .slide-content .slide-subtitle {
-    font-size: 25px;
-  }
 }
 .swiper .slide-bg {
   width: 100%;
