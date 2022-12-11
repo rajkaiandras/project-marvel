@@ -7,6 +7,12 @@
   position: relative;
   z-index: 2;
 }
+@media (max-width: 576px) {
+  .FavoriteCard {
+    width: 135px;
+    height: 270px;
+  }
+}
 .FavoriteCard .character-image-container {
   width: 100%;
   height: 50%;
