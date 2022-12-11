@@ -21,8 +21,9 @@ import disneyLogo from '../../assets/images/disney-logo.svg';
 // database
 const swiperSlideDB = [
   {
-    title: 'Captain Marvel',
-    subtitle: 'Carol Danvers transformed into the cosmic powered hero',
+    title: 'Star Lord',
+    subtitle:
+      'Peter Quill journeys through space as the leader of the Guardians of the Galaxy',
     image: swiperSlideImage1,
   },
   {
