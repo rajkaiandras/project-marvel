@@ -25,4 +25,10 @@
     left: 0;
     z-index: 1;
   }
+
+  .error {
+    position: relative;
+    z-index: 2;
+    color: red;
+  }
 }

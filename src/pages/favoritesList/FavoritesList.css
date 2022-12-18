@@ -26,4 +26,9 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+.FavoritesList .error {
+  position: relative;
+  z-index: 2;
+  color: red;
 }/*# sourceMappingURL=FavoritesList.css.map */

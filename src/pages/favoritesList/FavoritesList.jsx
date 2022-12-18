@@ -25,12 +25,13 @@ export const FavoritesList = () => {
       <div className="backdrop-blur"></div>
 
       {/* error display */}
-      {error && <p>{error}</p>}
+      {error && <p className="error">{error}</p>}
+
+      {/* loading mask */}
+      {documents === null && error === null && <LoadingMask />}
 
       {/* characters display */}
-      {!documents ? (
-        <LoadingMask />
-      ) : (
+      {documents &&
         documents
           .filter((document) => document.userId === user.uid)
           .sort((a, b) => {
@@ -46,8 +47,7 @@ export const FavoritesList = () => {
                 characterId={characterId}
               />
             );
-          })
-      )}
+          })}
     </div>
   );
 };
