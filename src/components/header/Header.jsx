@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // hooks
 import { useAuthContext } from '../../hooks/useAuthContext';
@@ -31,6 +31,11 @@ export const Header = () => {
     }
   }, [navBarVisibility]);
 
+  // style of active Router NavLink
+  let activeStyle = {
+    color: 'red',
+  };
+
   return (
     <header className="Header">
       <MarvelLogo />
@@ -44,53 +49,76 @@ export const Header = () => {
       </button>
 
       <nav className={navBarVisibility ? 'nav-bar active' : 'nav-bar'}>
-        <Link to="/" onClick={toggleNavBar}>
+        <NavLink
+          to="/"
+          onClick={toggleNavBar}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           Home
-        </Link>
-        <Link to="/comics" onClick={toggleNavBar}>
+        </NavLink>
+        <NavLink
+          to="/comics"
+          onClick={toggleNavBar}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           Comics
-        </Link>
-        <Link to="/characters" onClick={toggleNavBar}>
+        </NavLink>
+        <NavLink
+          to="/characters"
+          onClick={toggleNavBar}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           Characters
-        </Link>
+        </NavLink>
 
         {!user && (
           <>
-            <Link to="/login" onClick={toggleNavBar}>
+            <NavLink
+              to="/login"
+              onClick={toggleNavBar}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
               Log In
-            </Link>
-            <Link to="/signup" onClick={toggleNavBar}>
+            </NavLink>
+            <NavLink
+              to="/signup"
+              onClick={toggleNavBar}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
               Sign Up
-            </Link>
+            </NavLink>
           </>
         )}
 
         {user && (
           <>
-            <Link
+            <NavLink
               className="favorites-btn"
               to={'/favorites'}
               onClick={toggleNavBar}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Favorites
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               className="user-profile-btn"
               to={'/userprofile'}
               onClick={toggleNavBar}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               {user.displayName}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               className="log-out-btn"
               to="#"
               onClick={() => {
                 toggleNavBar();
                 logOut();
               }}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Log Out
-            </Link>
+            </NavLink>
           </>
         )}
       </nav>
