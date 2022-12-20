@@ -116,7 +116,7 @@ export const Header = () => {
             </NavLink>
             <NavLink
               className="log-out-btn"
-              to="#"
+              to="/"
               onClick={() => {
                 toggleNavBar();
                 logOut();
