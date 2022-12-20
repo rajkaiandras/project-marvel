@@ -54,21 +54,24 @@ export const Header = () => {
           onClick={toggleNavBar}
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Home
+          <i className="fa-solid fa-house-chimney"></i>
+          <span>Home</span>
         </NavLink>
         <NavLink
           to="/comics"
           onClick={toggleNavBar}
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Comics
+          <i className="fa-solid fa-book-open"></i>
+          <span>Comics</span>
         </NavLink>
         <NavLink
           to="/characters"
           onClick={toggleNavBar}
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Characters
+          <i className="fa-solid fa-people-group"></i>
+          <span>Characters</span>
         </NavLink>
 
         {!user && (
@@ -78,14 +81,16 @@ export const Header = () => {
               onClick={toggleNavBar}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
-              Log In
+              <i className="fa-solid fa-right-to-bracket"></i>
+              <span>Log In</span>
             </NavLink>
             <NavLink
               to="/signup"
               onClick={toggleNavBar}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
-              Sign Up
+              <i className="fa-solid fa-user-plus"></i>
+              <span>Sign up</span>
             </NavLink>
           </>
         )}
@@ -98,7 +103,8 @@ export const Header = () => {
               onClick={toggleNavBar}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
-              Favorites
+              <i className="fa-solid fa-heart"></i>
+              <span>Favorites</span>
             </NavLink>
             <NavLink
               className="user-profile-btn"
