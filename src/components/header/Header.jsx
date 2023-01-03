@@ -22,14 +22,14 @@ export const Header = () => {
     setNavBarVisibility(!navBarVisibility);
   };
 
-  // prevent body scrolling when navigation bar is opened
-  useEffect(() => {
+  // prevent body scrolling when navigation bar is opened !!! BUG !!!
+  /* useEffect(() => {
     if (navBarVisibility) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [navBarVisibility]);
+  }, [navBarVisibility]); */
 
   // style of active Router NavLink
   let activeStyle = {

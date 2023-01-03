@@ -18,7 +18,7 @@ export const AboutMe = () => {
           </h1>
           <h4 className="profession">Frontend Developer</h4>
           <h6 className="profession-detail">
-            Building excellent UI/UX with React
+            Building excellent UIs with React.js
           </h6>
         </div>
         <div className="social-icons">
@@ -36,12 +36,13 @@ export const AboutMe = () => {
             <div className="skill">
               <h3 className="skill-title">Social competencies</h3>
               <ul>
-                <li>High level of motivation</li>
-                <li>Strong attention to detail</li>
-                <li>Emotional intelligence</li>
-                <li>Communication</li>
+                <li>Growth Mindset, Willingness of Long Life Learning</li>
+                <li>Enthusiasm, High Level of Motivation</li>
+                <li>Communication Skills</li>
+                <li>Strong Attention to Detail</li>
+                <li>Critical Thinking</li>
                 <li>Teamwork</li>
-                <li>Time management</li>
+                <li>Emotional Intelligence</li>
               </ul>
             </div>
             <div className="skill">
@@ -49,14 +50,16 @@ export const AboutMe = () => {
               <ul>
                 <li>React.js</li>
                 <li>Javascript ES6</li>
-                <li>SASS</li>
+                <li>SCSS</li>
                 <li>CSS3</li>
                 <li>HTML5</li>
-                <li>Trello</li>
+                <li>Firebase</li>
+                <li>Express.js</li>
                 <li>Git</li>
                 <li>GitHub</li>
-                <li>Agile Methodologies</li>
-                <li>English B2</li>
+                <li>Trello - Project Management</li>
+                <li>Agile Methodologies - SCRUM</li>
+                <li>English B2 Complex C</li>
               </ul>
             </div>
           </div>
