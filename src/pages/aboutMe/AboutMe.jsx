@@ -17,9 +17,7 @@ export const AboutMe = () => {
             <span className="initialize">R</span>ajkai
           </h1>
           <h4 className="profession">Frontend Developer</h4>
-          <h6 className="profession-detail">
-            Building excellent UIs with React.js
-          </h6>
+          <h6 className="profession-detail">Building UIs with React.js</h6>
         </div>
         <div className="social-icons">
           <a href="http://www.linkedin.com/in/andrasrajkai">

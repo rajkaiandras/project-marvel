@@ -46,6 +46,11 @@
   margin-right: 3px;
   color: red;
 }
+@media (max-width: 576px) {
+  .AboutMe .profile-card .head-container .profile-name .initialize {
+    font-size: 40px;
+  }
+}
 .AboutMe .profile-card .head-container .profession {
   color: gray;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -109,6 +114,11 @@
 .AboutMe .profile-card .skills-container .skills-list .skill {
   width: 50%;
 }
+@media (max-width: 576px) {
+  .AboutMe .profile-card .skills-container .skills-list .skill {
+    width: 100%;
+  }
+}
 .AboutMe .profile-card .skills-container .skills-list .skill .skill-title {
   text-transform: uppercase;
   font-weight: 500;
@@ -142,13 +152,18 @@
   font-weight: 300;
   letter-spacing: 1.2px;
   line-height: 1.5;
-  text-align: justify;
+  text-align: center;
   color: white;
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  .AboutMe .profile-card .story-container p {
+    text-align: left;
+  }
+}
 .AboutMe .profile-card .story-container .highlighted-text {
   color: red;
-  font-style: italic;
+  font-weight: 400;
 }
 .AboutMe .profile-card .signature {
   font-family: "Ms Madi", cursive;
@@ -156,4 +171,10 @@
   color: white;
   text-align: right;
   margin: 0 100px 50px 0;
+}
+@media (max-width: 576px) {
+  .AboutMe .profile-card .signature {
+    font-size: 30px;
+    margin: 0 40px 50px 0;
+  }
 }/*# sourceMappingURL=AboutMe.css.map */
